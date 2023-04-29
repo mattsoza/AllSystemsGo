@@ -1,0 +1,43 @@
+[gd_scene load_steps=2 format=3 uid="uid://qh6rapbb0uaf"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_4lu4y"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="Dialog" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -223.5
+offset_top = -130.0
+offset_right = 223.5
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="TextureRect" type="TextureRect" parent="Dialog"]
+visible = false
+layout_mode = 0
+offset_left = 149.5
+offset_top = 74.0
+offset_right = 299.5
+offset_bottom = 128.0
+texture = SubResource("ViewportTexture_4lu4y")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Dialog"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.507
+anchor_top = 1.0
+anchor_right = 0.507
+anchor_bottom = 1.0
+offset_left = -56.129
+offset_top = -42.0
+offset_right = 55.871
+offset_bottom = -11.0
+text = "Quack quack!"
+metadata/_edit_group_ = true
