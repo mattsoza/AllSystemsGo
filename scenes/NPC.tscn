@@ -1,7 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://bx6lxcp1maxfo"]
+[gd_scene load_steps=6 format=3]
 
 [ext_resource type="Script" path="res://scripts/NPC.gd" id="1_ww5ex"]
-[ext_resource type="PackedScene" uid="uid://qh6rapbb0uaf" path="res://scenes/dialog.tscn" id="2_6t4nd"]
+[ext_resource type="PackedScene" uid="uid://qh6rapbb0uaf" path="res://dialogues/dialog.tscn" id="2_6t4nd"]
 [ext_resource type="Texture2D" uid="uid://6i45g5bvjdmt" path="res://assets/Duck.png" id="3_x1yj7"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_dbjk2"]
