@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://bc064ff1s1oxs" path="res://scenes/player.tscn" id="1_wwgsr"]
 [ext_resource type="Texture2D" uid="uid://c7kybjcrbpss8" path="res://assets/Chroma_Outside.png" id="2_7c63t"]
-[ext_resource type="PackedScene" uid="uid://bx6lxcp1maxfo" path="res://scenes/NPC.tscn" id="3_xj36g"]
+[ext_resource type="PackedScene" uid="uid://bbi4ctklbaodx" path="res://scenes/NPC.tscn" id="3_xj36g"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_k4hd2"]
 texture = ExtResource("2_7c63t")

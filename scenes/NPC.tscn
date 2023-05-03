@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3]
+[gd_scene load_steps=6 format=3 uid="uid://bbi4ctklbaodx"]
 
 [ext_resource type="Script" path="res://scripts/NPC.gd" id="1_ww5ex"]
 [ext_resource type="PackedScene" uid="uid://qh6rapbb0uaf" path="res://dialogues/dialog.tscn" id="2_6t4nd"]
@@ -15,17 +15,6 @@ script = ExtResource("1_ww5ex")
 
 [node name="dialog" parent="." instance=ExtResource("2_6t4nd")]
 visible = false
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -62.0
-offset_top = -33.0
-offset_right = 59.0
-offset_bottom = 3.0
-grow_horizontal = 2
-grow_vertical = 0
 
 [node name="CollisionShape2D" type="CollisionPolygon2D" parent="."]
 position = Vector2(-1, 0)
