@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://b0bci77psjvp0"]
+
+[ext_resource type="Script" path="res://scripts/dragging.gd" id="1_4sghb"]
+[ext_resource type="Texture2D" uid="uid://rrvpdl1xh1rs" path="res://assets/elementStone002.png" id="2_w7igb"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_4sghb")
+
+[node name="ElementStone002" type="Sprite2D" parent="."]
+texture = ExtResource("2_w7igb")
+offset = Vector2(12, -12)
+
+[node name="Area2D" type="Area2D" parent="ElementStone002"]
+position = Vector2(11, -10)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="ElementStone002/Area2D"]
+polygon = PackedVector2Array(35, 26.2, 35, 35, -35, 35, -35, -35, -27, -35)
+
+[connection signal="input_event" from="ElementStone002/Area2D" to="." method="_on_area_2d_input_event"]
