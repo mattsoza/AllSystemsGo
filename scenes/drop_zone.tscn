@@ -2,5 +2,5 @@
 
 [ext_resource type="Script" path="res://scripts/dropZone.gd" id="1_c72f5"]
 
-[node name="dropZone" type="Marker2D"]
+[node name="dropZone" type="Node2D"]
 script = ExtResource("1_c72f5")

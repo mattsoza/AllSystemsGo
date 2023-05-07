@@ -1,10 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://bndltla7j57hx"]
+[gd_scene load_steps=6 format=3 uid="uid://3oae4fsxf8ph"]
 
 [ext_resource type="PackedScene" uid="uid://bc064ff1s1oxs" path="res://scenes/player.tscn" id="1_wwgsr"]
 [ext_resource type="Texture2D" uid="uid://c7kybjcrbpss8" path="res://assets/Chroma_Outside.png" id="2_7c63t"]
 [ext_resource type="PackedScene" uid="uid://bbi4ctklbaodx" path="res://scenes/NPC.tscn" id="3_xj36g"]
-[ext_resource type="PackedScene" uid="uid://b0bci77psjvp0" path="res://scenes/triangle.tscn" id="4_yihkb"]
-[ext_resource type="PackedScene" uid="uid://c5dt0go54hm3r" path="res://scenes/drop_zone.tscn" id="5_njdqo"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_k4hd2"]
 texture = ExtResource("2_7c63t")
@@ -1445,8 +1443,3 @@ position = Vector2(24, 41)
 
 [node name="NPC (Area2D)" parent="." instance=ExtResource("3_xj36g")]
 position = Vector2(249, 37)
-
-[node name="Node2D" parent="." instance=ExtResource("4_yihkb")]
-
-[node name="dropZone" parent="." instance=ExtResource("5_njdqo")]
-position = Vector2(-70, 125)

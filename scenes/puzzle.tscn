@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=3 uid="uid://dyuiump67rg8h"]
+
+[ext_resource type="PackedScene" uid="uid://b0bci77psjvp0" path="res://scenes/puzzlePiece.tscn" id="1_2iwu0"]
+[ext_resource type="Script" path="res://scripts/puzzle.gd" id="1_k376c"]
+
+[node name="puzzle" type="Node2D"]
+script = ExtResource("1_k376c")
+
+[node name="puzzlePiece" parent="." instance=ExtResource("1_2iwu0")]
+position = Vector2(208, 166)
+
+[node name="puzzlePiece2" parent="." instance=ExtResource("1_2iwu0")]
+position = Vector2(447, 141)
+
+[node name="puzzlePiece3" parent="." instance=ExtResource("1_2iwu0")]
+position = Vector2(717, 230)
+
+[node name="puzzlePiece4" parent="." instance=ExtResource("1_2iwu0")]
+position = Vector2(952, 93)
+
+[node name="Button" type="Button" parent="."]
+offset_left = 536.0
+offset_top = 533.0
+offset_right = 609.0
+offset_bottom = 564.0
+text = "Finished"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
