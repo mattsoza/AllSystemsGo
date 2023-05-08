@@ -1,28 +1,61 @@
-[gd_scene load_steps=3 format=3 uid="uid://dyuiump67rg8h"]
+[gd_scene load_steps=5 format=3 uid="uid://cy2boms63dsb6"]
 
-[ext_resource type="PackedScene" uid="uid://b0bci77psjvp0" path="res://scenes/puzzlePiece.tscn" id="1_2iwu0"]
+[ext_resource type="PackedScene" uid="uid://hfvwmgpi72xw" path="res://scenes/puzzlePiece.tscn" id="1_2iwu0"]
 [ext_resource type="Script" path="res://scripts/puzzle.gd" id="1_k376c"]
+[ext_resource type="Texture2D" uid="uid://6pjco27rx316" path="res://assets/tangram/tri2.png" id="3_mqmat"]
 
-[node name="puzzle" type="Node2D"]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8vnd0"]
+radius = 14.93
+height = 35.04
+
+[node name="puzzle" type="Control"]
+layout_mode = 3
+anchors_preset = 0
 script = ExtResource("1_k376c")
 
-[node name="puzzlePiece" parent="." instance=ExtResource("1_2iwu0")]
-position = Vector2(208, 166)
-
-[node name="puzzlePiece2" parent="." instance=ExtResource("1_2iwu0")]
-position = Vector2(447, 141)
-
-[node name="puzzlePiece3" parent="." instance=ExtResource("1_2iwu0")]
-position = Vector2(717, 230)
-
-[node name="puzzlePiece4" parent="." instance=ExtResource("1_2iwu0")]
-position = Vector2(952, 93)
-
 [node name="Button" type="Button" parent="."]
+layout_mode = 0
 offset_left = 536.0
 offset_top = 533.0
 offset_right = 609.0
 offset_bottom = 564.0
 text = "Finished"
 
+[node name="puzzlePiece" parent="." instance=ExtResource("1_2iwu0")]
+position = Vector2(118, 187)
+
+[node name="dropZone" parent="puzzlePiece" index="0"]
+position = Vector2(23.6447, 148.789)
+offset = Vector2(12, -12)
+
+[node name="CollisionShape2D" parent="puzzlePiece/dropZone/Area2D" index="0"]
+rotation = -0.71733
+shape = SubResource("CapsuleShape2D_8vnd0")
+
+[node name="ElementStone002" parent="puzzlePiece" index="1"]
+offset = Vector2(12, -12)
+
+[node name="Area2D" parent="puzzlePiece/ElementStone002" index="0"]
+position = Vector2(22, -21)
+
+[node name="puzzlePiece2" parent="." instance=ExtResource("1_2iwu0")]
+position = Vector2(320, 208)
+
+[node name="dropZone" parent="puzzlePiece2" index="0"]
+offset = Vector2(12, -12)
+
+[node name="CollisionShape2D" parent="puzzlePiece2/dropZone/Area2D" index="0"]
+rotation = -0.837758
+shape = SubResource("CapsuleShape2D_8vnd0")
+
+[node name="ElementStone002" parent="puzzlePiece2" index="1"]
+texture = ExtResource("3_mqmat")
+offset = Vector2(12, -12)
+
+[node name="CollisionPolygon2D" parent="puzzlePiece2/ElementStone002/Area2D" index="0"]
+position = Vector2(1.49998, -1.5)
+
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+
+[editable path="puzzlePiece"]
+[editable path="puzzlePiece2"]
