@@ -1,31 +1,73 @@
-[gd_scene load_steps=5 format=3 uid="uid://cy2boms63dsb6"]
+[gd_scene load_steps=20 format=3 uid="uid://c5j6wq0fx1l5d"]
 
 [ext_resource type="PackedScene" uid="uid://hfvwmgpi72xw" path="res://scenes/puzzlePiece.tscn" id="1_2iwu0"]
 [ext_resource type="Script" path="res://scripts/puzzle.gd" id="1_k376c"]
+[ext_resource type="Texture2D" uid="uid://y4key52pnoko" path="res://assets/whiteBackground.jpg" id="2_ipveg"]
 [ext_resource type="Texture2D" uid="uid://6pjco27rx316" path="res://assets/tangram/tri2.png" id="3_mqmat"]
+[ext_resource type="Texture2D" uid="uid://bgjjs2x4utn3s" path="res://assets/tangram/smallshade.png" id="4_sncxw"]
+[ext_resource type="Texture2D" uid="uid://db6d6hlbea1ia" path="res://assets/tangram/small1.png" id="5_20irf"]
+[ext_resource type="Texture2D" uid="uid://cm6u143fvwoxu" path="res://assets/tangram/midtri.png" id="5_avtho"]
+[ext_resource type="Texture2D" uid="uid://byl2ieto1g8v7" path="res://assets/tangram/squareshade.png" id="9_jitpv"]
+[ext_resource type="Texture2D" uid="uid://ddvur8urrte6r" path="res://assets/tangram/square.png" id="10_hlx6l"]
+[ext_resource type="Texture2D" uid="uid://diirdcrsiu20l" path="res://assets/tangram/small2.png" id="10_mmg5s"]
+[ext_resource type="Texture2D" uid="uid://ctnjsqdtjwrpv" path="res://assets/tangram/parashade.png" id="11_d3e6d"]
+[ext_resource type="Texture2D" uid="uid://cbqbedrvex5k3" path="res://assets/tangram/midshade.png" id="11_igkxs"]
+[ext_resource type="Texture2D" uid="uid://cn0d1587cans8" path="res://assets/tangram/para.png" id="12_2uq4i"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8vnd0"]
 radius = 14.93
 height = 35.04
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8f5w8"]
+radius = 6.17
+height = 16.04
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_wy42h"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ieyhj"]
+radius = 6.47
+height = 20.36
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_n6vxm"]
+radius = 4.78
+height = 14.98
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8wnv8"]
+radius = 8.35
+height = 23.5
 
 [node name="puzzle" type="Control"]
 layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_k376c")
 
-[node name="Button" type="Button" parent="."]
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+z_index = -2
 layout_mode = 0
-offset_left = 536.0
-offset_top = 533.0
-offset_right = 609.0
-offset_bottom = 564.0
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("2_ipveg")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 910.0
+offset_top = 744.0
+offset_right = 983.0
+offset_bottom = 775.0
+grow_horizontal = 2
+grow_vertical = 0
 text = "Finished"
 
 [node name="puzzlePiece" parent="." instance=ExtResource("1_2iwu0")]
-position = Vector2(118, 187)
+position = Vector2(431, 385)
 
 [node name="dropZone" parent="puzzlePiece" index="0"]
-position = Vector2(23.6447, 148.789)
+position = Vector2(232.569, 95.8676)
+rotation = 3.92699
 offset = Vector2(12, -12)
 
 [node name="CollisionShape2D" parent="puzzlePiece/dropZone/Area2D" index="0"]
@@ -33,15 +75,19 @@ rotation = -0.71733
 shape = SubResource("CapsuleShape2D_8vnd0")
 
 [node name="ElementStone002" parent="puzzlePiece" index="1"]
+position = Vector2(76, -17.5)
+rotation = 3.92699
 offset = Vector2(12, -12)
 
 [node name="Area2D" parent="puzzlePiece/ElementStone002" index="0"]
 position = Vector2(22, -21)
 
 [node name="puzzlePiece2" parent="." instance=ExtResource("1_2iwu0")]
-position = Vector2(320, 208)
+position = Vector2(625, 419)
 
 [node name="dropZone" parent="puzzlePiece2" index="0"]
+position = Vector2(163.069, 106.868)
+rotation = 2.35619
 offset = Vector2(12, -12)
 
 [node name="CollisionShape2D" parent="puzzlePiece2/dropZone/Area2D" index="0"]
@@ -49,13 +95,134 @@ rotation = -0.837758
 shape = SubResource("CapsuleShape2D_8vnd0")
 
 [node name="ElementStone002" parent="puzzlePiece2" index="1"]
+position = Vector2(255, -27)
+rotation = 2.35619
 texture = ExtResource("3_mqmat")
 offset = Vector2(12, -12)
 
 [node name="CollisionPolygon2D" parent="puzzlePiece2/ElementStone002/Area2D" index="0"]
 position = Vector2(1.49998, -1.5)
 
+[node name="puzzlePiece3" parent="." instance=ExtResource("1_2iwu0")]
+position = Vector2(859, 393)
+
+[node name="dropZone" parent="puzzlePiece3" index="0"]
+position = Vector2(60.0685, 91.8675)
+rotation = -0.785398
+texture = ExtResource("4_sncxw")
+offset = Vector2(22, -22)
+
+[node name="CollisionShape2D" parent="puzzlePiece3/dropZone/Area2D" index="0"]
+rotation = -0.837758
+shape = SubResource("CapsuleShape2D_8f5w8")
+metadata/_edit_pinned_properties_ = [&"shape"]
+
+[node name="ElementStone002" parent="puzzlePiece3" index="1"]
+position = Vector2(-70, -14.5)
+rotation = -0.785398
+texture = ExtResource("5_20irf")
+offset = Vector2(22, -22)
+
+[node name="CollisionPolygon2D" parent="puzzlePiece3/ElementStone002/Area2D" index="0"]
+position = Vector2(11, -12)
+polygon = PackedVector2Array(-32, -0.5, 1, 32, -32, 32)
+
+[node name="puzzlePiece6" parent="." instance=ExtResource("1_2iwu0")]
+position = Vector2(1265, 389)
+
+[node name="dropZone" parent="puzzlePiece6" index="0"]
+position = Vector2(-95.9315, 123.368)
+texture = ExtResource("9_jitpv")
+offset = Vector2(16, -16)
+
+[node name="CollisionShape2D" parent="puzzlePiece6/dropZone/Area2D" index="0"]
+shape = SubResource("CircleShape2D_wy42h")
+
+[node name="ElementStone002" parent="puzzlePiece6" index="1"]
+position = Vector2(-205, -14)
+texture = ExtResource("10_hlx6l")
+offset = Vector2(16, -16)
+
+[node name="CollisionPolygon2D" parent="puzzlePiece6/ElementStone002/Area2D" index="0"]
+polygon = PackedVector2Array(-16.5, -16.5, 16, -16, 16.5, 16.5, -16.5, 16.5)
+
+[node name="puzzlePiece7" parent="." instance=ExtResource("1_2iwu0")]
+position = Vector2(1448, 352)
+
+[node name="dropZone" parent="puzzlePiece7" index="0"]
+position = Vector2(-303.931, 123.868)
+rotation = -2.35619
+texture = ExtResource("11_d3e6d")
+offset = Vector2(0, -16)
+flip_h = true
+
+[node name="CollisionShape2D" parent="puzzlePiece7/dropZone/Area2D" index="0"]
+rotation = 2.35619
+shape = SubResource("CapsuleShape2D_ieyhj")
+
+[node name="ElementStone002" parent="puzzlePiece7" index="1"]
+position = Vector2(-27, 7)
+rotation = -2.35619
+texture = ExtResource("12_2uq4i")
+offset = Vector2(0, -16)
+flip_h = true
+
+[node name="CollisionPolygon2D" parent="puzzlePiece7/ElementStone002/Area2D" index="0"]
+polygon = PackedVector2Array(-0.353546, -17.3241, 32.8805, 15.9099, -0.353546, 15.9099, -33.234, -16.2635)
+
+[node name="puzzlePiece4" parent="." instance=ExtResource("1_2iwu0")]
+position = Vector2(968, 393)
+
+[node name="dropZone" parent="puzzlePiece4" index="0"]
+position = Vector2(-74.4315, 127.368)
+rotation = -6.28319
+texture = ExtResource("4_sncxw")
+offset = Vector2(22, -22)
+
+[node name="CollisionShape2D" parent="puzzlePiece4/dropZone/Area2D" index="0"]
+rotation = -0.837758
+shape = SubResource("CapsuleShape2D_n6vxm")
+metadata/_edit_pinned_properties_ = [&"shape"]
+
+[node name="ElementStone002" parent="puzzlePiece4" index="1"]
+position = Vector2(-4, -22.5)
+rotation = -4.71239
+texture = ExtResource("10_mmg5s")
+offset = Vector2(10, -22)
+
+[node name="CollisionPolygon2D" parent="puzzlePiece4/ElementStone002/Area2D" index="0"]
+position = Vector2(-1.5, -12)
+polygon = PackedVector2Array(-0.0797043, -0.627441, 0.627419, 31.8995, -32, 32)
+
+[node name="puzzlePiece5" parent="." instance=ExtResource("1_2iwu0")]
+position = Vector2(1124, 361)
+
+[node name="dropZone" parent="puzzlePiece5" index="0"]
+position = Vector2(-52.9315, 121.368)
+rotation = -1.5708
+texture = ExtResource("11_igkxs")
+offset = Vector2(0, -20)
+
+[node name="CollisionShape2D" parent="puzzlePiece5/dropZone/Area2D" index="0"]
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_8wnv8")
+
+[node name="ElementStone002" parent="puzzlePiece5" index="1"]
+position = Vector2(80.5, 0)
+rotation = -1.5708
+texture = ExtResource("5_avtho")
+offset = Vector2(0, -20)
+
+[node name="CollisionPolygon2D" parent="puzzlePiece5/ElementStone002/Area2D" index="0"]
+position = Vector2(-10, 7.5)
+polygon = PackedVector2Array(-0.5, -19, 33.5, 14.5, -33, 14.5)
+
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 
 [editable path="puzzlePiece"]
 [editable path="puzzlePiece2"]
+[editable path="puzzlePiece3"]
+[editable path="puzzlePiece6"]
+[editable path="puzzlePiece7"]
+[editable path="puzzlePiece4"]
+[editable path="puzzlePiece5"]

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cm6u143fvwoxu"
-path="res://.godot/imported/midtri.png-f41ef3718a63c8767aa7bc201401b564.ctex"
+uid="uid://db6d6hlbea1ia"
+path="res://.godot/imported/small1.png-be5458336d2f1ef14e9d14159e7b28e6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/tangram/midtri.png"
-dest_files=["res://.godot/imported/midtri.png-f41ef3718a63c8767aa7bc201401b564.ctex"]
+source_file="res://assets/tangram/small1.png"
+dest_files=["res://.godot/imported/small1.png-be5458336d2f1ef14e9d14159e7b28e6.ctex"]
 
 [params]
 

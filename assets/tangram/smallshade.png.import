@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bgjjs2x4utn3s"
-path="res://.godot/imported/midtrishade.png-fda7a916706e9d513499a9c945b61acc.ctex"
+path="res://.godot/imported/smallshade.png-0440e625ae53e88b3ad2efd4090916d7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/tangram/midtrishade.png"
-dest_files=["res://.godot/imported/midtrishade.png-fda7a916706e9d513499a9c945b61acc.ctex"]
+source_file="res://assets/tangram/smallshade.png"
+dest_files=["res://.godot/imported/smallshade.png-0440e625ae53e88b3ad2efd4090916d7.ctex"]
 
 [params]
 

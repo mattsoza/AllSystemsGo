@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://vltg3n27ate4"
-path="res://.godot/imported/smalltrishade.png-9d952c639adcf98e6804460d0ddda5ec.ctex"
+uid="uid://y4key52pnoko"
+path="res://.godot/imported/whiteBackground.jpg-aae086cef1fea2fca1c5e7719516038a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/tangram/smalltrishade.png"
-dest_files=["res://.godot/imported/smalltrishade.png-9d952c639adcf98e6804460d0ddda5ec.ctex"]
+source_file="res://assets/whiteBackground.jpg"
+dest_files=["res://.godot/imported/whiteBackground.jpg-aae086cef1fea2fca1c5e7719516038a.ctex"]
 
 [params]
 
