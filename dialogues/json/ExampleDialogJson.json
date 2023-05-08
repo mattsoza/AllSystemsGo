@@ -1,0 +1,9 @@
+[
+	{ 
+	"dialogs": [{"name": "Duck", "text": "Hello there human!"},
+		{"name": "Duck", "text": "I'm just here quacking"},
+		{"name": "Duck", "text": "Got any bread?"}],
+	"choices":[{"choice": "Yes", "nextDialog": 1},
+		{"choice": "No", "nextDialog": 2},
+		{"choice": "What's bread?", "nextDialog": 3}]}
+]
