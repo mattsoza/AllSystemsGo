@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://bex7xj3y31yow"]
+
+[ext_resource type="Texture2D" uid="uid://rrvpdl1xh1rs" path="res://assets/elementStone002.png" id="1_01nw5"]
+
+[node name="ElementStone002" type="Sprite2D"]
+texture = ExtResource("1_01nw5")
+offset = Vector2(12, -12)
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(11, -10)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
+polygon = PackedVector2Array(35, 26.2, 35, 35, -35, 35, -35, -35, -27, -35)
