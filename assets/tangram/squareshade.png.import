@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://briie1w3exmlx"
-path="res://.godot/imported/smalltri2.png-557fdc0ad0ea2ab5794a557c96e1cb9c.ctex"
+uid="uid://byl2ieto1g8v7"
+path="res://.godot/imported/squareshade.png-2f93374c9ad249946af68aa03fd82964.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/tangram/smalltri2.png"
-dest_files=["res://.godot/imported/smalltri2.png-557fdc0ad0ea2ab5794a557c96e1cb9c.ctex"]
+source_file="res://assets/tangram/squareshade.png"
+dest_files=["res://.godot/imported/squareshade.png-2f93374c9ad249946af68aa03fd82964.ctex"]
 
 [params]
 

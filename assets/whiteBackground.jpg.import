@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://g1l3vcxxd5y6"
-path="res://.godot/imported/smalltri1.png-1413c7737c23ab223de110dc514877c7.ctex"
+uid="uid://y4key52pnoko"
+path="res://.godot/imported/whiteBackground.jpg-aae086cef1fea2fca1c5e7719516038a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/tangram/smalltri1.png"
-dest_files=["res://.godot/imported/smalltri1.png-1413c7737c23ab223de110dc514877c7.ctex"]
+source_file="res://assets/whiteBackground.jpg"
+dest_files=["res://.godot/imported/whiteBackground.jpg-aae086cef1fea2fca1c5e7719516038a.ctex"]
 
 [params]
 
