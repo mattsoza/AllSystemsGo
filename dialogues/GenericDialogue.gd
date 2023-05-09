@@ -1,29 +1,42 @@
 extends CanvasLayer
 
-export(String, FILE, "*.json") var d_file
+var d_file = 'res://dialogues/json/ExampleDialogJson.json'
 
-var dialog = []
-var current_dialog_id = -1
+var dialog = null
+var i = 0
+var next_dialog_id = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	start()
+	"""
+	Opens the file for use
+	"""
+	load_dialog()
 
 func load_dialog():
-	var file = File.new()
-	if file.file_exists(d_file):
-		file.open(d_file, File.READ)
-		return parse_json(file.get_as_text())
-	
+	dialog = FileAccess.get_file_as_string(d_file)
+	dialog = JSON.parse_string(dialog)
+	return dialog
+
 func _input(event):
 	if event.is_action_pressed("interact"):
-		next_script()
-		
+		next_script_piece()
+
+func next_script_piece():
+	"""
+	Handles the changing of the 
+	"""
+	if i >= len(dialog[next_dialog_id]['dialogs']):
+		i = 0
+	next_script()
+	i += 1
+
 func next_script():
-	current_dialog_id += 1
-	
-	$NinePatchRect/Name.text = dialog[current_dialog_id]['dialogs']['name']
-	$NinePatchRect/Chat.text = dialog[current_dialog_id]['chat']
+	"""
+	Handles grabbing the next script that should be read from the JSON file
+	"""
+	$NinePatchRect/Name.text = dialog[next_dialog_id]['dialogs'][i]['name']
+	$NinePatchRect/Chat.text = dialog[next_dialog_id]['dialogs'][i]['text']
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):

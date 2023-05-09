@@ -5,5 +5,12 @@
 		{"name": "Duck", "text": "Got any bread?"}],
 	"choices":[{"choice": "Yes", "nextDialog": 1},
 		{"choice": "No", "nextDialog": 2},
+		{"choice": "What's bread?", "nextDialog": 3}]},
+	{ 
+	"dialogs": [{"name": "Duck", "text": "This is part 2 of text!"},
+		{"name": "Duck", "text": "Look! Progressive text works!"},
+		{"name": "Duck", "text": "Got any bread?"}],
+	"choices":[{"choice": "Yes", "nextDialog": 1},
+		{"choice": "No", "nextDialog": 2},
 		{"choice": "What's bread?", "nextDialog": 3}]}
 ]
