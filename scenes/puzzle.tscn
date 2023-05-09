@@ -39,31 +39,32 @@ height = 23.5
 [node name="puzzle" type="Control"]
 layout_mode = 3
 anchors_preset = 0
+scale = Vector2(0.4, 0.4)
 script = ExtResource("1_k376c")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
 
 [node name="NinePatchRect" type="NinePatchRect" parent="."]
 z_index = -2
-layout_mode = 0
-offset_right = 1920.0
-offset_bottom = 1080.0
+layout_mode = 2
+offset_right = 100.0
+offset_bottom = 100.0
+scale = Vector2(11.4954, 6.46121)
 texture = ExtResource("2_ipveg")
 
 [node name="Button" type="Button" parent="."]
-layout_mode = 1
-anchors_preset = 12
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 910.0
-offset_top = 744.0
-offset_right = 983.0
-offset_bottom = 775.0
+layout_mode = 2
+offset_left = 527.0
+offset_top = 597.0
+offset_right = 600.0
+offset_bottom = 628.0
 grow_horizontal = 2
 grow_vertical = 0
 text = "Finished"
 
 [node name="puzzlePiece" parent="." instance=ExtResource("1_2iwu0")]
-position = Vector2(431, 385)
+position = Vector2(50, 234)
 
 [node name="dropZone" parent="puzzlePiece" index="0"]
 position = Vector2(232.569, 95.8676)
@@ -83,7 +84,7 @@ offset = Vector2(12, -12)
 position = Vector2(22, -21)
 
 [node name="puzzlePiece2" parent="." instance=ExtResource("1_2iwu0")]
-position = Vector2(625, 419)
+position = Vector2(244, 268)
 
 [node name="dropZone" parent="puzzlePiece2" index="0"]
 position = Vector2(163.069, 106.868)
@@ -104,7 +105,7 @@ offset = Vector2(12, -12)
 position = Vector2(1.49998, -1.5)
 
 [node name="puzzlePiece3" parent="." instance=ExtResource("1_2iwu0")]
-position = Vector2(859, 393)
+position = Vector2(478, 242)
 
 [node name="dropZone" parent="puzzlePiece3" index="0"]
 position = Vector2(60.0685, 91.8675)
@@ -128,7 +129,7 @@ position = Vector2(11, -12)
 polygon = PackedVector2Array(-32, -0.5, 1, 32, -32, 32)
 
 [node name="puzzlePiece6" parent="." instance=ExtResource("1_2iwu0")]
-position = Vector2(1265, 389)
+position = Vector2(884, 238)
 
 [node name="dropZone" parent="puzzlePiece6" index="0"]
 position = Vector2(-95.9315, 123.368)
@@ -147,7 +148,7 @@ offset = Vector2(16, -16)
 polygon = PackedVector2Array(-16.5, -16.5, 16, -16, 16.5, 16.5, -16.5, 16.5)
 
 [node name="puzzlePiece7" parent="." instance=ExtResource("1_2iwu0")]
-position = Vector2(1448, 352)
+position = Vector2(1067, 201)
 
 [node name="dropZone" parent="puzzlePiece7" index="0"]
 position = Vector2(-303.931, 123.868)
@@ -171,7 +172,7 @@ flip_h = true
 polygon = PackedVector2Array(-0.353546, -17.3241, 32.8805, 15.9099, -0.353546, 15.9099, -33.234, -16.2635)
 
 [node name="puzzlePiece4" parent="." instance=ExtResource("1_2iwu0")]
-position = Vector2(968, 393)
+position = Vector2(587, 242)
 
 [node name="dropZone" parent="puzzlePiece4" index="0"]
 position = Vector2(-74.4315, 127.368)
@@ -195,7 +196,7 @@ position = Vector2(-1.5, -12)
 polygon = PackedVector2Array(-0.0797043, -0.627441, 0.627419, 31.8995, -32, 32)
 
 [node name="puzzlePiece5" parent="." instance=ExtResource("1_2iwu0")]
-position = Vector2(1124, 361)
+position = Vector2(743, 210)
 
 [node name="dropZone" parent="puzzlePiece5" index="0"]
 position = Vector2(-52.9315, 121.368)
@@ -217,6 +218,19 @@ offset = Vector2(0, -20)
 position = Vector2(-10, 7.5)
 polygon = PackedVector2Array(-0.5, -19, 33.5, 14.5, -33, 14.5)
 
+[node name="successText" type="CanvasLayer" parent="."]
+
+[node name="RichTextLabel" type="RichTextLabel" parent="successText"]
+offset_left = 345.0
+offset_top = 204.0
+offset_right = 845.0
+offset_bottom = 504.0
+bbcode_enabled = true
+text = "[font_size=40][center][color=black]You equip your new antigen hat![/color][/center]"
+fit_content = true
+scroll_active = false
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 
 [editable path="puzzlePiece"]

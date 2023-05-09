@@ -1,12 +1,13 @@
-[gd_scene load_steps=4 format=3 uid="uid://bc064ff1s1oxs"]
+[gd_scene load_steps=5 format=3 uid="uid://bc064ff1s1oxs"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_ebyfs"]
 [ext_resource type="Texture2D" uid="uid://d3tmjjh1bpfoo" path="res://assets/Player Sprite.png" id="1_pg5bn"]
+[ext_resource type="PackedScene" uid="uid://c5j6wq0fx1l5d" path="res://scenes/puzzle.tscn" id="3_l4awl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qbcsm"]
 size = Vector2(28, 30)
 
-[node name="CharacterBody2D" type="CharacterBody2D"]
+[node name="CharacterBody2D" type="CharacterBody2D" groups=["player"]]
 script = ExtResource("1_ebyfs")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -18,3 +19,11 @@ shape = SubResource("RectangleShape2D_qbcsm")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(2.5, 2.5)
+
+[node name="puzzle" parent="." instance=ExtResource("3_l4awl")]
+visible = false
+z_index = 10
+offset_left = -230.0
+offset_top = -129.0
+offset_right = -230.0
+offset_bottom = -129.0

@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://bndltla7j57hx"]
+[gd_scene load_steps=7 format=3 uid="uid://3oae4fsxf8ph"]
 
 [ext_resource type="PackedScene" uid="uid://bc064ff1s1oxs" path="res://scenes/player.tscn" id="1_wwgsr"]
 [ext_resource type="Texture2D" uid="uid://c7kybjcrbpss8" path="res://assets/Chroma_Outside.png" id="2_7c63t"]
 [ext_resource type="PackedScene" uid="uid://bbi4ctklbaodx" path="res://scenes/NPC.tscn" id="3_xj36g"]
+[ext_resource type="PackedScene" uid="uid://dej3hiuaho4ri" path="res://scenes/puzzleNPC.tscn" id="4_wjptw"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_k4hd2"]
 texture = ExtResource("2_7c63t")
@@ -1443,3 +1444,8 @@ position = Vector2(24, 41)
 
 [node name="NPC (Area2D)" parent="." instance=ExtResource("3_xj36g")]
 position = Vector2(249, 37)
+
+[node name="puzzleNPC" parent="." instance=ExtResource("4_wjptw")]
+position = Vector2(-111, 106)
+
+[editable path="player"]

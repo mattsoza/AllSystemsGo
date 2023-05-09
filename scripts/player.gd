@@ -2,6 +2,11 @@ extends CharacterBody2D
 
 # Establish our characters direction to interface with objects
 var direction: Vector2 = Vector2()
+var puzzleActive = false
+var lockPlayer = false
+
+func _ready():
+	$puzzle.visible = puzzleActive
 
 # function for movement
 func handle_movement():
@@ -30,6 +35,11 @@ func handle_movement():
 	
 	move_and_slide()
 	
+func enterPuzzleMode():
+	lockPlayer = true
+	$puzzle.visible = true
+	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	handle_movement()
+	if !lockPlayer:
+		handle_movement()
