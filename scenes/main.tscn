@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://bc064ff1s1oxs" path="res://scenes/player.tscn" id="1_wwgsr"]
 [ext_resource type="Texture2D" uid="uid://c7kybjcrbpss8" path="res://assets/Chroma_Outside.png" id="2_7c63t"]
-[ext_resource type="PackedScene" uid="uid://bbi4ctklbaodx" path="res://scenes/NPC.tscn" id="3_xj36g"]
+[ext_resource type="PackedScene" uid="uid://d1ixq2o81fljf" path="res://scenes/NPC scenes/redInformer.tscn" id="4_1tvjp"]
 [ext_resource type="PackedScene" uid="uid://dej3hiuaho4ri" path="res://scenes/puzzleNPC.tscn" id="4_wjptw"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_k4hd2"]
@@ -1442,10 +1442,10 @@ layer_0/tile_data = PackedInt32Array(-262144, 131072, 21, -262143, 196608, 21, -
 [node name="player" parent="." instance=ExtResource("1_wwgsr")]
 position = Vector2(24, 41)
 
-[node name="NPC (Area2D)" parent="." instance=ExtResource("3_xj36g")]
-position = Vector2(249, 37)
-
 [node name="puzzleNPC" parent="." instance=ExtResource("4_wjptw")]
 position = Vector2(-111, 106)
+
+[node name="redInformer" parent="." instance=ExtResource("4_1tvjp")]
+position = Vector2(185, -15)
 
 [editable path="player"]
