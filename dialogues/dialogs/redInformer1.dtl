@@ -1,0 +1,15 @@
+redInformer: Howdy stranger! You ain't from around here, are you?
+[label name="START"]
+redInformer: What you need help with?
+- Nothing
+	redInformer: Be safe out there!
+- Who are you?
+	redInformer: My name's Johnny!
+	[wait time="4.0"]
+	redInformer: Oh, I guess you were asking about my job. I'm a red blood cell! I carry oxygen around the body, but I also carry carbon dioxide out.
+	redInformer: I mean, I do more than that, but that's mostly it.
+	redInformer: Do it for about 3-4 months and then supposedly I'm "outta comission" according to the white blood cells. Hehe, what do you think they mean by that?
+	[jump timeline="" label="START"]
+- Where am I?
+	redInformer: Wellllllll you're in the kidneys of course! Blood like me suspended in plasma is supposed to come through here and get all cleaned up. I got lost though so I'm just hanging out. Hope this isn't bad for my human!
+	[jump timeline="" label="START"]

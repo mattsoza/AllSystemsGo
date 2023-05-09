@@ -1,0 +1,35 @@
+[gd_scene load_steps=6 format=3 uid="uid://d1ixq2o81fljf"]
+
+[ext_resource type="Texture2D" uid="uid://dek0q6q0dqkp5" path="res://assets/NPCs/redInformerF1.png" id="1_yhkjv"]
+[ext_resource type="Texture2D" uid="uid://dckm0b2sbq5gs" path="res://assets/NPCs/redInformerF2.png" id="2_n54u2"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_588gi"]
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_iejrp"]
+frames = 2
+frame_0/texture = ExtResource("1_yhkjv")
+frame_1/texture = ExtResource("2_n54u2")
+frame_1/duration = 1.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rxv47"]
+size = Vector2(30.1176, 22.303)
+
+[node name="redInformer" type="Node2D"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+build_mode = 1
+polygon = PackedVector2Array(-9, -8, 6, -8, 6, 8, -9, 8, -9, -7, -18, -7, -18, 16, 18, 16, 18, -17, -18, -17, -18, -8)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(-1, -5.96046e-08)
+scale = Vector2(0.53125, 0.515625)
+physics_material_override = SubResource("PhysicsMaterial_588gi")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(-1.88235, -3.87879)
+texture = SubResource("AnimatedTexture_iejrp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-1.88235, -1.93939)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_rxv47")

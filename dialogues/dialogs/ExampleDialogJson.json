@@ -13,4 +13,3 @@
 	"choices":[{"choice": "Yes", "nextDialog": 1},
 		{"choice": "No", "nextDialog": 2},
 		{"choice": "What's bread?", "nextDialog": 3}]}
-]

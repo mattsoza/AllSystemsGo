@@ -1,0 +1,8 @@
+if {talkedToRedHelper} == "false":
+	HelpfulRedBloodCell: Pst. Hey buddy. Come over here.
+	HelpfulRedBloodCell: Look, I know that you're a foreign pathogen. I don't personally mind myself, but there's gonna be some people who won't be very happy about that fact...
+	[wait time="8.0"]
+	HelpfulRedBloodCell: Yeah, it’s pretty rough. If you want to get through, I’d talk to Johnny over there. They know what these white blood cells are on the lookout for.
+	VAR {talkedToRedHelper} = "true"
+else:
+	HelpfulRedBloodCell: Hey, what're you being so nosy for? Go talk to Johnny already, I don't want you getting killed out here.
