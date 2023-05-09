@@ -15,7 +15,7 @@ script = ExtResource("1_unsr4")
 [node name="CollisionShape2D" type="CollisionPolygon2D" parent="."]
 position = Vector2(-1, 0)
 build_mode = 1
-polygon = PackedVector2Array(8, -6, 21, -6, 21, 23, -23, 22, -22, -19, 21, -19, 21, -7, -8, -7, -9, 10, 8, 10)
+polygon = PackedVector2Array(8, -6, 24, -7, 25, -5, 29, 31, -29, 30, -29, -22, 25, -23, 25, -6, -8, -7, -9, 10)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2(-1, -5.96046e-08)
@@ -28,3 +28,13 @@ texture = ExtResource("3_5tkrn")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(-0.941177, 2.90909)
 shape = SubResource("RectangleShape2D_n3uib")
+
+[node name="text" type="RichTextLabel" parent="."]
+offset_left = -36.0
+offset_top = -23.0
+offset_right = 64.0
+offset_bottom = 138.0
+bbcode_enabled = true
+text = "[font_size=10]Make a receptor"
+fit_content = true
+scroll_active = false
