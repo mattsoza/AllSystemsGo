@@ -22,12 +22,12 @@ Dialogic="*res://addons/dialogic/Other/DialogicGameHandler.gd"
 [dialogic]
 
 editor/character_preview_mode=0
-editor/current_editor=&"Timeline Editor"
+editor/current_editor=&"VariablesEditor"
 editor/current_resources={
-"Character Editor": "res://assets/NPCs/redInformer.dch",
-"Timeline Editor": "res://dialogues/dialogs/redInformer1.dtl"
+"Character Editor": "res://assets/NPCs/kidneyStone.dch",
+"Timeline Editor": "res://dialogues/dialogs/redInformer2.dtl"
 }
-editor/last_resources=PackedStringArray("res://assets/NPCs/HelpfulRedBloodCell.dch", "res://dialogues/json/RedHelper1.dtl", "res://dialogues/dialogs/RedHelper1.dtl", "res://dialogues/dialogs/redInformer1.dtl", "res://assets/NPCs/redInformer.dch", "")
+editor/last_resources=PackedStringArray("res://assets/NPCs/HelpfulRedBloodCell.dch", "res://dialogues/json/RedHelper1.dtl", "res://dialogues/dialogs/RedHelper1.dtl", "res://dialogues/dialogs/redInformer1.dtl", "res://assets/NPCs/redInformer.dch", "res://assets/NPCs/kidneyStone.dch", "res://assets/NPCs/kidneyStone.dtl", "res://dialogues/dialogs/redInformer2.dtl", "")
 editor/visual_timeline_editor_sidebar=200.0
 variables={
 "talkedToRedHelper": "false"
@@ -45,6 +45,7 @@ text/autocontinue_delay=1.0
 text/autopauses={}
 glossary/default_case_sensitive=true
 editor/current_timeline_path="res://dialogues/dialogs/redInformer1.dtl"
+glossary/glossary_files=["res://dialogues/dialogs/dialog_glossary.tres"]
 
 [editor_plugins]
 

@@ -1,0 +1,26 @@
+redInformer (New portrait): Howdy stranger! You ain't from around here, are you?
+[label name="START"]
+redInformer: What you need help with?
+- Who are you?
+	redInformer: My name's Johnny!
+	[wait time="4.0"]
+	redInformer: Oh, I guess you were asking about my job. I'm a red blood cell! I carry oxygen around the body, but I also carry carbon dioxide out.
+	redInformer: I mean, I do more than that, but that's mostly it.
+	redInformer: Do it for about 3-4 months and then supposedly I'm "outta comission" according to the white blood cells. Hehe, what do you think they mean by that?
+	[jump timeline="" label="START"]
+- Where am I?
+	redInformer: Wellllllll you're in the kidneys of course! Blood like me suspended in plasma is supposed to come through here and get all cleaned up. I got lost though so I'm just hanging out. Hope this isn't bad for my human!
+	[jump timeline="" label="START"]
+- How do I pass the white blood cells?
+	redInformer: Dag nabbit! Did Jimmy tell you to come to me? He's always telling foreign pathogens to come to me for help.
+	redInformer: I told him to stop doing that!
+	redInformer: But you look a bit different.....................................................................................................................
+	redInformer: You know what.. I like the cut of your jib. You got moxie kid! Alright, you broke me, I'll tell ya how to get past.
+	redInformer: But let me tell yer, it won't be easy! 1000s of folk like you come by here everyday only to meet an untimely death. Wooooo doggy!
+	redInformer: Anyhow. You see this neat little hat I'm wearing? This here is called an antigen. You look around and you'll see everyone wearing one. It's what keeps the white blood cells from attacking us. 
+	redInformer: Everything's got antigens, but the white blood cells can recognize the good ones on cells in the body from bad ones like those on bacteria. And you're absolutely filthy, they can probably smell your dirty-butt antigens from miles away
+	redInformer: Get yur'self one of these and you'll be finer than a frog hair split four ways.
+	player (New portrait): Can I have yours?
+	redInformer: Heck no! I don't wanna get eaten alive!
+- Nothing
+	redInformer: Be safe out there!

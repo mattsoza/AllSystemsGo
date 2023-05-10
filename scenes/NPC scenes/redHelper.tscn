@@ -13,14 +13,14 @@ frame_1/texture = ExtResource("2_mcwvp")
 frame_1/duration = 1.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mfnou"]
-size = Vector2(27.2941, 30.0606)
+size = Vector2(43.2941, 44.6061)
 
-[node name="redHelper" type="Node2D"]
+[node name="redHelper" type="Area2D"]
 script = ExtResource("1_crjqp")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 build_mode = 1
-polygon = PackedVector2Array(-9, -8, 6, -8, 6, 8, -9, 8, -9, -7, -18, -7, -18, 16, 18, 16, 18, -17, -18, -17, -18, -8)
+polygon = PackedVector2Array(12, -13, 12, 12, -13, 12, -13, -11, -24, -11, -24, 23, 24, 23, 24, -23, -24, -23, -24, -13)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2(-1, -5.96046e-08)
@@ -28,9 +28,11 @@ scale = Vector2(0.53125, 0.515625)
 physics_material_override = SubResource("PhysicsMaterial_qxxjj")
 
 [node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(1.88235, 0)
+scale = Vector2(1.5, 1.5)
 texture = SubResource("AnimatedTexture_71jyy")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(-0.47059, -0.48485)
+position = Vector2(0.941176, -0.969696)
 scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_mfnou")

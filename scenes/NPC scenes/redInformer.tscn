@@ -20,7 +20,7 @@ script = ExtResource("1_78dpn")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 build_mode = 1
-polygon = PackedVector2Array(-9, -8, 6, -8, 6, 8, -9, 8, -9, -7, -24, -7, -24, 20, 22, 20, 22, -23, -24, -23, -24, -8)
+polygon = PackedVector2Array(12, -9, 12, 10, -15, 10, -15, -8, -24, -8, -24, 20, 22, 20, 22, -23, -24, -23, -24, -9)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2(-1, -5.96046e-08)

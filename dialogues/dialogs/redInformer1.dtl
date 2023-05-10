@@ -1,8 +1,6 @@
 redInformer: Howdy stranger! You ain't from around here, are you?
 [label name="START"]
 redInformer: What you need help with?
-- Nothing
-	redInformer: Be safe out there!
 - Who are you?
 	redInformer: My name's Johnny!
 	[wait time="4.0"]
@@ -13,3 +11,5 @@ redInformer: What you need help with?
 - Where am I?
 	redInformer: Wellllllll you're in the kidneys of course! Blood like me suspended in plasma is supposed to come through here and get all cleaned up. I got lost though so I'm just hanging out. Hope this isn't bad for my human!
 	[jump timeline="" label="START"]
+- Nothing
+	Be safe out there!
