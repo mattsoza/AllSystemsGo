@@ -2376,6 +2376,9 @@ polygon = PackedVector2Array(57, -44, 23, -50, -108, -2, -140, 43, -157, 102, -1
 [node name="whiteCells" parent="." instance=ExtResource("8_sclly")]
 position = Vector2(215, -32)
 
+[node name="nonmatchingAnimation" parent="whiteCells/Camera2D" index="0"]
+visible = false
+
 [connection signal="animation_finished" from="whiteCells/Camera2D/nonmatchingAnimation/AnimationPlayer" to="whiteCells/Camera2D" method="_on_animation_player_animation_finished"]
 
 [editable path="player"]

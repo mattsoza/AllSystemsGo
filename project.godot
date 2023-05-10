@@ -22,9 +22,9 @@ Dialogic="*res://addons/dialogic/Other/DialogicGameHandler.gd"
 [dialogic]
 
 editor/character_preview_mode=0
-editor/current_editor=&"VariablesEditor"
+editor/current_editor=&"Character Editor"
 editor/current_resources={
-"Character Editor": "res://assets/NPCs/dyingCell.dch",
+"Character Editor": "res://assets/NPCs/whiteCell1.dch",
 "Timeline Editor": "res://dialogues/dialogs/RedHelper1.dtl"
 }
 editor/last_resources=PackedStringArray("res://assets/NPCs/HelpfulRedBloodCell.dch", "res://dialogues/dialogs/RedHelper1.dtl", "res://dialogues/dialogs/redInformer1.dtl", "res://assets/NPCs/redInformer.dch", "res://assets/NPCs/kidneyStone.dch", "res://assets/NPCs/kidneyStone.dtl", "res://dialogues/dialogs/redInformer2.dtl", "res://assets/NPCs/player.dch", "res://assets/NPCs/dyingCell.dch", "res://assets/NPCs/dyingCell1.dtl", "res://assets/NPCs/dyingCell2.dtl", "res://assets/NPCs/dyingCell3.dtl", "res://dialogues/dialogs/intro.dtl", "res://assets/NPCs/intro.dch", "res://assets/NPCs/whiteCell1.dch", "")
@@ -56,7 +56,7 @@ layout/export_overrides={
 "name_label_font_size": "24.0",
 "text_size": "24.0"
 }
-editor/last/resources=["res://assets/NPCs/HelpfulRedBloodCell.dch", "res://dialogues/dialogs/RedHelper1.dtl", "res://dialogues/dialogs/redInformer1.dtl", "res://assets/NPCs/redInformer.dch", "res://assets/NPCs/kidneyStone.dch", "res://assets/NPCs/kidneyStone.dtl", "res://dialogues/dialogs/redInformer2.dtl"]
+editor/last/resources=["res://assets/NPCs/HelpfulRedBloodCell.dch", "res://dialogues/dialogs/RedHelper1.dtl", "res://dialogues/dialogs/redInformer1.dtl", "res://assets/NPCs/redInformer.dch", "res://assets/NPCs/kidneyStone.dch", "res://assets/NPCs/kidneyStone.dtl", "res://dialogues/dialogs/redInformer2.dtl", "res://assets/NPCs/player.dch", "res://assets/NPCs/dyingCell.dch", "res://assets/NPCs/dyingCell1.dtl", "res://assets/NPCs/dyingCell2.dtl", "res://assets/NPCs/dyingCell3.dtl", "res://dialogues/dialogs/intro.dtl", "res://assets/NPCs/intro.dch", "res://assets/NPCs/whiteCell1.dch"]
 
 [editor_plugins]
 
