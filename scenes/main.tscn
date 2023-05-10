@@ -2362,4 +2362,10 @@ position = Vector2(384, 540)
 [node name="dyingCell" parent="." instance=ExtResource("7_3xow0")]
 position = Vector2(684, 359)
 
+[node name="Kidney Walls (static body)" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Kidney Walls (static body)"]
+build_mode = 1
+polygon = PackedVector2Array(57, -44, 23, -50, -108, -2, -140, 43, -157, 102, -196, 211, -194, 324, -160, 434, -86, 508, 69, 573, 183, 587, 356, 582, 484, 559, 641, 487, 679, 442, 747, 279, 747, 189, 728, 139, 674, 43, 637, 3, 550, -30, 514, -40, 374, -40, 349, -35, 346, -7, 320, 0, 265, -3, 275, 61, 275, 100, 252, 155, 202, 158, 157, 101, 155, 26, 160, -8, 120, -5, 77, -12, 67, -19, 60, -38, 670, -76, 890, 529, 107, 643, -255, 441, -173, -70, 63, -82)
+
 [editable path="player"]
