@@ -1,0 +1,38 @@
+[gd_scene load_steps=7 format=3 uid="uid://ojuhcinf8w7h"]
+
+[ext_resource type="Script" path="res://scripts/NPC scripts/dyingCell.gd" id="1_h4ybg"]
+[ext_resource type="Texture2D" uid="uid://dlgw6kc8ecdks" path="res://assets/NPCs/dyingCellF1.png" id="1_lx02o"]
+[ext_resource type="Texture2D" uid="uid://go4hgnibfbaj" path="res://assets/NPCs/dyingCellF2.png" id="2_pxpuf"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_xltl7"]
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_nh81k"]
+frames = 2
+frame_0/texture = ExtResource("1_lx02o")
+frame_1/texture = ExtResource("2_pxpuf")
+frame_1/duration = 1.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_myp4p"]
+size = Vector2(43.2941, 44.6061)
+
+[node name="dyingCell" type="Area2D"]
+script = ExtResource("1_h4ybg")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+build_mode = 1
+polygon = PackedVector2Array(12, -13, 12, 12, -13, 12, -13, -11, -24, -11, -24, 23, 24, 23, 24, -23, -24, -23, -24, -13)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(-1, -5.96046e-08)
+scale = Vector2(0.53125, 0.515625)
+physics_material_override = SubResource("PhysicsMaterial_xltl7")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(1.88235, 0)
+scale = Vector2(1.5, 1.5)
+texture = SubResource("AnimatedTexture_nh81k")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0.941176, -0.969696)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_myp4p")
