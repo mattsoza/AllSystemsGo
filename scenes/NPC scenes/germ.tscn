@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3]
+[gd_scene load_steps=7 format=3 uid="uid://b181v15ot466d"]
 
 [ext_resource type="Script" path="res://scripts/NPC scripts/germ.gd" id="1_aolb1"]
 [ext_resource type="Texture2D" uid="uid://gt5s6kn55dnx" path="res://assets/NPCs/germF1.png" id="2_mjn85"]
