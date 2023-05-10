@@ -24,14 +24,15 @@ Dialogic="*res://addons/dialogic/Other/DialogicGameHandler.gd"
 editor/character_preview_mode=0
 editor/current_editor=&"VariablesEditor"
 editor/current_resources={
-"Character Editor": "res://assets/NPCs/germ.dch",
+"Character Editor": "res://assets/NPCs/dyingCell.dch",
 "Timeline Editor": "res://dialogues/dialogs/RedHelper1.dtl"
 }
-editor/last_resources=PackedStringArray("res://assets/NPCs/HelpfulRedBloodCell.dch", "res://dialogues/json/RedHelper1.dtl", "res://dialogues/dialogs/RedHelper1.dtl", "res://dialogues/dialogs/redInformer1.dtl", "res://assets/NPCs/redInformer.dch", "res://assets/NPCs/kidneyStone.dch", "res://assets/NPCs/kidneyStone.dtl", "res://dialogues/dialogs/redInformer2.dtl", "res://assets/NPCs/player.dch", "res://assets/NPCs/dyingCell.dch", "res://assets/NPCs/dyingCell1.dtl", "res://assets/NPCs/dyingCell2.dtl", "res://assets/NPCs/dyingCell3.dch", "res://assets/NPCs/dyingCell3.dtl", "res://assets/NPCs/germ.dch", "res://assets/NPCs/whiteCell1.dch", "res://assets/NPCs/White Cell 2.dch", "")
+editor/last_resources=PackedStringArray("res://assets/NPCs/HelpfulRedBloodCell.dch", "res://dialogues/dialogs/RedHelper1.dtl", "res://dialogues/dialogs/redInformer1.dtl", "res://assets/NPCs/redInformer.dch", "res://assets/NPCs/kidneyStone.dch", "res://assets/NPCs/kidneyStone.dtl", "res://dialogues/dialogs/redInformer2.dtl", "res://assets/NPCs/player.dch", "res://assets/NPCs/dyingCell.dch", "res://assets/NPCs/dyingCell1.dtl", "res://assets/NPCs/dyingCell2.dtl", "res://assets/NPCs/dyingCell3.dtl", "res://dialogues/dialogs/intro.dtl", "res://assets/NPCs/intro.dch", "res://assets/NPCs/whiteCell1.dch", "")
 editor/visual_timeline_editor_sidebar=200.0
 variables={
 "eatCell": "false",
 "endEat": "false",
+"germPresent": "false",
 "talkedToRedHelper": "false",
 "talkedToRedInformer": "false",
 "viewGerm": "false"

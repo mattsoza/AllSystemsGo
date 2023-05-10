@@ -34,5 +34,4 @@ texture = SubResource("AnimatedTexture_iejrp")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(-0.941176, 0.969698)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_rxv47")

@@ -1,6 +1,6 @@
-[gd_scene load_steps=7 format=3 uid="uid://02agyvksyc4c"]
+[gd_scene load_steps=7 format=3]
 
-[ext_resource type="Script" path="res://scenes/NPC scenes/germ.gd" id="1_aolb1"]
+[ext_resource type="Script" path="res://scripts/NPC scripts/germ.gd" id="1_aolb1"]
 [ext_resource type="Texture2D" uid="uid://gt5s6kn55dnx" path="res://assets/NPCs/germF1.png" id="2_mjn85"]
 [ext_resource type="Texture2D" uid="uid://6cso4potlh6q" path="res://assets/NPCs/germF2.png" id="3_jhpfk"]
 
