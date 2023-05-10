@@ -3,7 +3,7 @@ redInformer: Howdy stranger! You ain't from around here, are you?
 redInformer: What you need help with?
 - Who are you?
 	redInformer: My name's Johnny!
-	[wait time="4.0"]
+	redInformer: ...
 	redInformer: Oh, I guess you were asking about my job. I'm a red blood cell! I carry oxygen around the body, but I also carry carbon dioxide out.
 	redInformer: I mean, I do more than that, but that's mostly it.
 	redInformer: Do it for about 3-4 months and then supposedly I'm "outta comission" according to the white blood cells. Hehe, what do you think they mean by that?

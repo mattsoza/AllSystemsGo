@@ -4,7 +4,7 @@ dyingCell (Dying Cell): *cough cough, wheeze wheeze*
 	dyingCell: No I'm not ok! I just told you I'm dying!
 	[jump timeline="" label="d_start"]
 - Are you Johnny?
-	I'm not Johnny, I'm dying!
+	dyingCell: I'm not Johnny, I'm dying!
 	[jump timeline="" label="d_start"]
 - End conversation
 	dyingCell: Don't leave me....
