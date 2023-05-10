@@ -15,6 +15,42 @@ run/main_scene="res://scenes/main.tscn"
 config/features=PackedStringArray("4.0", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+Dialogic="*res://addons/dialogic/Other/DialogicGameHandler.gd"
+
+[dialogic]
+
+editor/character_preview_mode=0
+editor/current_editor=&"VariablesEditor"
+editor/current_resources={
+"Character Editor": "res://assets/NPCs/kidneyStone.dch",
+"Timeline Editor": "res://dialogues/dialogs/redInformer2.dtl"
+}
+editor/last_resources=PackedStringArray("res://assets/NPCs/HelpfulRedBloodCell.dch", "res://dialogues/json/RedHelper1.dtl", "res://dialogues/dialogs/RedHelper1.dtl", "res://dialogues/dialogs/redInformer1.dtl", "res://assets/NPCs/redInformer.dch", "res://assets/NPCs/kidneyStone.dch", "res://assets/NPCs/kidneyStone.dtl", "res://dialogues/dialogs/redInformer2.dtl", "")
+editor/visual_timeline_editor_sidebar=200.0
+variables={
+"talkedToRedHelper": "false"
+}
+animations/join_default_length=0.5
+animations/leave_default_length=0.5
+animations/leave_default_wait=true
+animations/join_default_wait=true
+choices/autofocus_first=true
+choices/delay=0.2
+save/autosave_delay=60.0
+text/speed=0.01
+text/skippable=true
+text/autocontinue_delay=1.0
+text/autopauses={}
+glossary/default_case_sensitive=true
+editor/current_timeline_path="res://dialogues/dialogs/redInformer1.dtl"
+glossary/glossary_files=["res://dialogues/dialogs/dialog_glossary.tres"]
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/dialogic/plugin.cfg")
+
 [input]
 
 up={
@@ -45,5 +81,14 @@ interact={
 click={
 "deadzone": 0.5,
 "events": [Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":0,"position":Vector2(0, 0),"global_position":Vector2(0, 0),"factor":1.0,"button_index":1,"pressed":false,"double_click":false,"script":null)
+]
+}
+dialogic_default_action={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":4194309,"physical_keycode":0,"key_label":0,"unicode":0,"echo":false,"script":null)
+, Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":0,"position":Vector2(0, 0),"global_position":Vector2(0, 0),"factor":1.0,"button_index":1,"pressed":true,"double_click":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":32,"physical_keycode":0,"key_label":0,"unicode":0,"echo":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":88,"physical_keycode":0,"key_label":0,"unicode":0,"echo":false,"script":null)
+, Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":0,"pressure":0.0,"pressed":false,"script":null)
 ]
 }

@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="DialogicGlossary" load_steps=2 format=3 uid="uid://bhkv6mflqbnrc"]
+
+[ext_resource type="Script" path="res://addons/dialogic/Events/Glossary/glossary_resource.gd" id="1_t4ufh"]
+
+[resource]
+script = ExtResource("1_t4ufh")
+entries = {
+"antigen": {
+"case_sensitive": true,
+"enabled": false,
+"text": "An antigen is a protein that exists on cells. Every cell in your body contains one, and it helps to identify good cells in the body from foreign pathogens invdaing the body."
+}
+}
+enabled = true

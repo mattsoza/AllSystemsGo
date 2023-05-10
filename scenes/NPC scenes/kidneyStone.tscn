@@ -1,0 +1,37 @@
+[gd_scene load_steps=7 format=3 uid="uid://cwl62dnp55j6n"]
+
+[ext_resource type="Texture2D" uid="uid://bxlg1oxcmp46c" path="res://assets/NPCs/kidneyStoneF1.png" id="1_lg8qp"]
+[ext_resource type="Script" path="res://scripts/NPC scripts/kidneyStone.gd" id="1_oybgt"]
+[ext_resource type="Texture2D" uid="uid://bxe653wlkwk1v" path="res://assets/NPCs/kidneyStoneF2.png" id="2_fsmx7"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_w2ekk"]
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_5swv5"]
+frames = 2
+frame_0/texture = ExtResource("1_lg8qp")
+frame_1/texture = ExtResource("2_fsmx7")
+frame_1/duration = 1.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s0wgn"]
+size = Vector2(43.2941, 44.6061)
+
+[node name="kidneyStone" type="Area2D"]
+script = ExtResource("1_oybgt")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+build_mode = 1
+polygon = PackedVector2Array(12, -13, 12, 12, -13, 12, -13, -11, -24, -11, -24, 23, 24, 23, 24, -23, -24, -23, -24, -13)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(-1, -5.96046e-08)
+scale = Vector2(0.53125, 0.515625)
+physics_material_override = SubResource("PhysicsMaterial_w2ekk")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(1.88235, 0)
+scale = Vector2(1.5, 1.5)
+texture = SubResource("AnimatedTexture_5swv5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0.941176, -0.969696)
+shape = SubResource("RectangleShape2D_s0wgn")

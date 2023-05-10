@@ -15,7 +15,7 @@ func _ready():
 
 func load_dialog():
 	dialog = FileAccess.get_file_as_string(d_file)
-	dialog = JSON.parse_string(dialog)
+	dialog = JSON.parse_string(ialog)
 	return dialog
 
 func _input(event):
