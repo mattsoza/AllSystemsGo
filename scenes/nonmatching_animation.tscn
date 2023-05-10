@@ -1,0 +1,114 @@
+[gd_scene load_steps=8 format=3 uid="uid://0rtageivowne"]
+
+[ext_resource type="Texture2D" uid="uid://ds1h722s724qe" path="res://assets/DialogBox.png" id="1_k3elt"]
+[ext_resource type="Texture2D" uid="uid://skatftehtkc0" path="res://assets/untitled.png" id="2_fypxv"]
+[ext_resource type="Texture2D" uid="uid://cpkhnql2baen3" path="res://assets/wbcReceptor.png" id="3_2fbsp"]
+[ext_resource type="Texture2D" uid="uid://43gcp2hdfhs" path="res://assets/receptorstem1.png" id="4_u6r3v"]
+[ext_resource type="Texture2D" uid="uid://5bbjdp5f3khi" path="res://assets/receptorstem2.png" id="5_4u2fe"]
+
+[sub_resource type="Animation" id="Animation_jt4qc"]
+resource_name = "bacteria"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(227, 153), Vector2(283, 153)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D2:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(230, 153), Vector2(179, 153)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Receptorstem1:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(6.56, 1.93), Vector2(10.041, 1.93)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Receptorstem2:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(6.56, 1.93), Vector2(9.99, 1.93)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ic33x"]
+_data = {
+"bacteria": SubResource("Animation_jt4qc")
+}
+
+[node name="matchingAnimation" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1152.0
+offset_bottom = -648.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("1_k3elt")
+region_rect = Rect2(0, 0, 32, 32)
+patch_margin_left = 25
+patch_margin_top = 25
+patch_margin_right = 25
+patch_margin_bottom = 25
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(283, 153)
+rotation = 1.5708
+scale = Vector2(4, 4)
+texture = ExtResource("2_fypxv")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(179, 153)
+rotation = 1.5708
+scale = Vector2(4, 4)
+texture = ExtResource("3_2fbsp")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_ic33x")
+}
+
+[node name="Receptorstem1" type="Sprite2D" parent="."]
+position = Vector2(2.00003, 132)
+scale = Vector2(10.041, 1.93)
+texture = ExtResource("4_u6r3v")
+offset = Vector2(5.79268, -1.03627)
+
+[node name="Receptorstem2" type="Sprite2D" parent="."]
+position = Vector2(458, 137)
+scale = Vector2(9.99, 1.93)
+texture = ExtResource("5_4u2fe")
+offset = Vector2(-9.60366, -1.03627)

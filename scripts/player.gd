@@ -43,3 +43,7 @@ func enterPuzzleMode():
 func _process(delta):
 	if !lockPlayer:
 		handle_movement()
+
+
+func _on_puzzle_hidden():
+	lockPlayer = false

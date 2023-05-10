@@ -11,17 +11,6 @@ radius = 50.0
 scale = Vector2(2, 2)
 script = ExtResource("1_4sghb")
 
-[node name="dropZone" type="Sprite2D" parent="."]
-visibility_layer = 2
-z_index = -1
-position = Vector2(0, 129)
-texture = ExtResource("3_ujesr")
-
-[node name="Area2D" type="Area2D" parent="dropZone"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="dropZone/Area2D"]
-shape = SubResource("CircleShape2D_8lwfo")
-
 [node name="ElementStone002" type="Sprite2D" parent="."]
 texture = ExtResource("2_46bpr")
 
@@ -31,5 +20,15 @@ position = Vector2(11, -10)
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="ElementStone002/Area2D"]
 position = Vector2(-11, 10)
 polygon = PackedVector2Array(-32, -33, 32, 32, -32, 32)
+
+[node name="dropZone" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(0, 129)
+texture = ExtResource("3_ujesr")
+
+[node name="Area2D" type="Area2D" parent="dropZone"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="dropZone/Area2D"]
+shape = SubResource("CircleShape2D_8lwfo")
 
 [connection signal="input_event" from="ElementStone002/Area2D" to="." method="_on_area_2d_input_event"]

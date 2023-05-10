@@ -7,6 +7,11 @@ func _ready():
 	
 
 
+func playerEnter():
+	for body in get_overlapping_bodies():
+		if body.is_in_group("player"):
+			return true
+
 
 func interact():
 	if Input.is_action_pressed("interact") and has_overlapping_bodies():
@@ -18,7 +23,7 @@ func interact():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	interact()
-	if has_overlapping_bodies():
+	if playerEnter():
 		$text.visible = true
 	else:
 		$text.visible = false

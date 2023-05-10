@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://hfvwmgpi72xw" path="res://scenes/puzzlePiece.tscn" id="1_2iwu0"]
 [ext_resource type="Script" path="res://scripts/puzzle.gd" id="1_k376c"]
-[ext_resource type="Texture2D" uid="uid://y4key52pnoko" path="res://assets/whiteBackground.jpg" id="2_ipveg"]
+[ext_resource type="Texture2D" uid="uid://ds1h722s724qe" path="res://assets/DialogBox.png" id="2_kaja4"]
 [ext_resource type="Texture2D" uid="uid://6pjco27rx316" path="res://assets/tangram/tri2.png" id="3_mqmat"]
 [ext_resource type="Texture2D" uid="uid://bgjjs2x4utn3s" path="res://assets/tangram/smallshade.png" id="4_sncxw"]
 [ext_resource type="Texture2D" uid="uid://db6d6hlbea1ia" path="res://assets/tangram/small1.png" id="5_20irf"]
@@ -46,36 +46,38 @@ script = ExtResource("1_k376c")
 wait_time = 2.0
 
 [node name="NinePatchRect" type="NinePatchRect" parent="."]
-z_index = -2
+z_index = -3
 layout_mode = 2
-offset_right = 100.0
-offset_bottom = 100.0
-scale = Vector2(11.4954, 6.46121)
-texture = ExtResource("2_ipveg")
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("2_kaja4")
+region_rect = Rect2(0, 0, 32, 32)
+patch_margin_left = 25
+patch_margin_top = 25
+patch_margin_right = 25
+patch_margin_bottom = 25
 
-[node name="Button" type="Button" parent="."]
-layout_mode = 2
-offset_left = 527.0
-offset_top = 597.0
-offset_right = 600.0
-offset_bottom = 628.0
+[node name="Button" type="Button" parent="NinePatchRect"]
+z_index = 10
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -46.0
+offset_top = -80.5
+offset_right = 27.0
+offset_bottom = -49.5
 grow_horizontal = 2
 grow_vertical = 0
+action_mode = 0
 text = "Finished"
 
 [node name="puzzlePiece" parent="." instance=ExtResource("1_2iwu0")]
 position = Vector2(50, 234)
 
-[node name="dropZone" parent="puzzlePiece" index="0"]
-position = Vector2(232.569, 95.8676)
-rotation = 3.92699
-offset = Vector2(12, -12)
-
-[node name="CollisionShape2D" parent="puzzlePiece/dropZone/Area2D" index="0"]
-rotation = -0.71733
-shape = SubResource("CapsuleShape2D_8vnd0")
-
-[node name="ElementStone002" parent="puzzlePiece" index="1"]
+[node name="ElementStone002" parent="puzzlePiece" index="0"]
 position = Vector2(76, -17.5)
 rotation = 3.92699
 offset = Vector2(12, -12)
@@ -83,19 +85,20 @@ offset = Vector2(12, -12)
 [node name="Area2D" parent="puzzlePiece/ElementStone002" index="0"]
 position = Vector2(22, -21)
 
+[node name="dropZone" parent="puzzlePiece" index="1"]
+z_index = -3
+position = Vector2(232.069, 85.6176)
+rotation = 3.92699
+offset = Vector2(12, -12)
+
+[node name="CollisionShape2D" parent="puzzlePiece/dropZone/Area2D" index="0"]
+rotation = -0.71733
+shape = SubResource("CapsuleShape2D_8vnd0")
+
 [node name="puzzlePiece2" parent="." instance=ExtResource("1_2iwu0")]
 position = Vector2(244, 268)
 
-[node name="dropZone" parent="puzzlePiece2" index="0"]
-position = Vector2(163.069, 106.868)
-rotation = 2.35619
-offset = Vector2(12, -12)
-
-[node name="CollisionShape2D" parent="puzzlePiece2/dropZone/Area2D" index="0"]
-rotation = -0.837758
-shape = SubResource("CapsuleShape2D_8vnd0")
-
-[node name="ElementStone002" parent="puzzlePiece2" index="1"]
+[node name="ElementStone002" parent="puzzlePiece2" index="0"]
 position = Vector2(255, -27)
 rotation = 2.35619
 texture = ExtResource("3_mqmat")
@@ -104,21 +107,20 @@ offset = Vector2(12, -12)
 [node name="CollisionPolygon2D" parent="puzzlePiece2/ElementStone002/Area2D" index="0"]
 position = Vector2(1.49998, -1.5)
 
+[node name="dropZone" parent="puzzlePiece2" index="1"]
+z_index = -3
+position = Vector2(162.569, 96.618)
+rotation = 2.35619
+offset = Vector2(12, -12)
+
+[node name="CollisionShape2D" parent="puzzlePiece2/dropZone/Area2D" index="0"]
+rotation = -0.837758
+shape = SubResource("CapsuleShape2D_8vnd0")
+
 [node name="puzzlePiece3" parent="." instance=ExtResource("1_2iwu0")]
 position = Vector2(478, 242)
 
-[node name="dropZone" parent="puzzlePiece3" index="0"]
-position = Vector2(60.0685, 91.8675)
-rotation = -0.785398
-texture = ExtResource("4_sncxw")
-offset = Vector2(22, -22)
-
-[node name="CollisionShape2D" parent="puzzlePiece3/dropZone/Area2D" index="0"]
-rotation = -0.837758
-shape = SubResource("CapsuleShape2D_8f5w8")
-metadata/_edit_pinned_properties_ = [&"shape"]
-
-[node name="ElementStone002" parent="puzzlePiece3" index="1"]
+[node name="ElementStone002" parent="puzzlePiece3" index="0"]
 position = Vector2(-70, -14.5)
 rotation = -0.785398
 texture = ExtResource("5_20irf")
@@ -128,18 +130,22 @@ offset = Vector2(22, -22)
 position = Vector2(11, -12)
 polygon = PackedVector2Array(-32, -0.5, 1, 32, -32, 32)
 
+[node name="dropZone" parent="puzzlePiece3" index="1"]
+z_index = -3
+position = Vector2(59.5681, 81.6175)
+rotation = -0.785398
+texture = ExtResource("4_sncxw")
+offset = Vector2(22, -22)
+
+[node name="CollisionShape2D" parent="puzzlePiece3/dropZone/Area2D" index="0"]
+rotation = -0.837758
+shape = SubResource("CapsuleShape2D_8f5w8")
+metadata/_edit_pinned_properties_ = [&"shape"]
+
 [node name="puzzlePiece6" parent="." instance=ExtResource("1_2iwu0")]
 position = Vector2(884, 238)
 
-[node name="dropZone" parent="puzzlePiece6" index="0"]
-position = Vector2(-95.9315, 123.368)
-texture = ExtResource("9_jitpv")
-offset = Vector2(16, -16)
-
-[node name="CollisionShape2D" parent="puzzlePiece6/dropZone/Area2D" index="0"]
-shape = SubResource("CircleShape2D_wy42h")
-
-[node name="ElementStone002" parent="puzzlePiece6" index="1"]
+[node name="ElementStone002" parent="puzzlePiece6" index="0"]
 position = Vector2(-205, -14)
 texture = ExtResource("10_hlx6l")
 offset = Vector2(16, -16)
@@ -147,21 +153,19 @@ offset = Vector2(16, -16)
 [node name="CollisionPolygon2D" parent="puzzlePiece6/ElementStone002/Area2D" index="0"]
 polygon = PackedVector2Array(-16.5, -16.5, 16, -16, 16.5, 16.5, -16.5, 16.5)
 
+[node name="dropZone" parent="puzzlePiece6" index="1"]
+z_index = -3
+position = Vector2(-96.4319, 113.118)
+texture = ExtResource("9_jitpv")
+offset = Vector2(16, -16)
+
+[node name="CollisionShape2D" parent="puzzlePiece6/dropZone/Area2D" index="0"]
+shape = SubResource("CircleShape2D_wy42h")
+
 [node name="puzzlePiece7" parent="." instance=ExtResource("1_2iwu0")]
 position = Vector2(1067, 201)
 
-[node name="dropZone" parent="puzzlePiece7" index="0"]
-position = Vector2(-303.931, 123.868)
-rotation = -2.35619
-texture = ExtResource("11_d3e6d")
-offset = Vector2(0, -16)
-flip_h = true
-
-[node name="CollisionShape2D" parent="puzzlePiece7/dropZone/Area2D" index="0"]
-rotation = 2.35619
-shape = SubResource("CapsuleShape2D_ieyhj")
-
-[node name="ElementStone002" parent="puzzlePiece7" index="1"]
+[node name="ElementStone002" parent="puzzlePiece7" index="0"]
 position = Vector2(-27, 7)
 rotation = -2.35619
 texture = ExtResource("12_2uq4i")
@@ -171,21 +175,22 @@ flip_h = true
 [node name="CollisionPolygon2D" parent="puzzlePiece7/ElementStone002/Area2D" index="0"]
 polygon = PackedVector2Array(-0.353546, -17.3241, 32.8805, 15.9099, -0.353546, 15.9099, -33.234, -16.2635)
 
+[node name="dropZone" parent="puzzlePiece7" index="1"]
+z_index = -3
+position = Vector2(-304.431, 113.618)
+rotation = -2.35619
+texture = ExtResource("11_d3e6d")
+offset = Vector2(0, -16)
+flip_h = true
+
+[node name="CollisionShape2D" parent="puzzlePiece7/dropZone/Area2D" index="0"]
+rotation = 2.35619
+shape = SubResource("CapsuleShape2D_ieyhj")
+
 [node name="puzzlePiece4" parent="." instance=ExtResource("1_2iwu0")]
 position = Vector2(587, 242)
 
-[node name="dropZone" parent="puzzlePiece4" index="0"]
-position = Vector2(-74.4315, 127.368)
-rotation = -6.28319
-texture = ExtResource("4_sncxw")
-offset = Vector2(22, -22)
-
-[node name="CollisionShape2D" parent="puzzlePiece4/dropZone/Area2D" index="0"]
-rotation = -0.837758
-shape = SubResource("CapsuleShape2D_n6vxm")
-metadata/_edit_pinned_properties_ = [&"shape"]
-
-[node name="ElementStone002" parent="puzzlePiece4" index="1"]
+[node name="ElementStone002" parent="puzzlePiece4" index="0"]
 position = Vector2(-4, -22.5)
 rotation = -4.71239
 texture = ExtResource("10_mmg5s")
@@ -195,20 +200,22 @@ offset = Vector2(10, -22)
 position = Vector2(-1.5, -12)
 polygon = PackedVector2Array(-0.0797043, -0.627441, 0.627419, 31.8995, -32, 32)
 
+[node name="dropZone" parent="puzzlePiece4" index="1"]
+z_index = -3
+position = Vector2(-74.9319, 117.118)
+rotation = -6.28319
+texture = ExtResource("4_sncxw")
+offset = Vector2(22, -22)
+
+[node name="CollisionShape2D" parent="puzzlePiece4/dropZone/Area2D" index="0"]
+rotation = -0.837758
+shape = SubResource("CapsuleShape2D_n6vxm")
+metadata/_edit_pinned_properties_ = [&"shape"]
+
 [node name="puzzlePiece5" parent="." instance=ExtResource("1_2iwu0")]
 position = Vector2(743, 210)
 
-[node name="dropZone" parent="puzzlePiece5" index="0"]
-position = Vector2(-52.9315, 121.368)
-rotation = -1.5708
-texture = ExtResource("11_igkxs")
-offset = Vector2(0, -20)
-
-[node name="CollisionShape2D" parent="puzzlePiece5/dropZone/Area2D" index="0"]
-rotation = 1.5708
-shape = SubResource("CapsuleShape2D_8wnv8")
-
-[node name="ElementStone002" parent="puzzlePiece5" index="1"]
+[node name="ElementStone002" parent="puzzlePiece5" index="0"]
 position = Vector2(80.5, 0)
 rotation = -1.5708
 texture = ExtResource("5_avtho")
@@ -218,20 +225,31 @@ offset = Vector2(0, -20)
 position = Vector2(-10, 7.5)
 polygon = PackedVector2Array(-0.5, -19, 33.5, 14.5, -33, 14.5)
 
+[node name="dropZone" parent="puzzlePiece5" index="1"]
+z_index = -3
+position = Vector2(-53.4319, 111.118)
+rotation = -1.5708
+texture = ExtResource("11_igkxs")
+offset = Vector2(0, -20)
+
+[node name="CollisionShape2D" parent="puzzlePiece5/dropZone/Area2D" index="0"]
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_8wnv8")
+
 [node name="successText" type="CanvasLayer" parent="."]
 
 [node name="RichTextLabel" type="RichTextLabel" parent="successText"]
-offset_left = 345.0
-offset_top = 204.0
-offset_right = 845.0
-offset_bottom = 504.0
+offset_left = 374.0
+offset_top = 202.0
+offset_right = 809.0
+offset_bottom = 312.0
 bbcode_enabled = true
 text = "[font_size=40][center][color=black]You equip your new antigen hat![/color][/center]"
 fit_content = true
 scroll_active = false
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
-[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="NinePatchRect/Button" to="." method="_on_button_pressed"]
 
 [editable path="puzzlePiece"]
 [editable path="puzzlePiece2"]

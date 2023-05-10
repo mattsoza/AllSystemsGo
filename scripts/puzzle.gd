@@ -14,6 +14,7 @@ func _process(delta):
 
 
 func _on_button_pressed():
+	print(true)
 	finished = true
 	for piece in pieces:
 		if !piece.correct: 

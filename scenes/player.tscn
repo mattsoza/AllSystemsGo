@@ -27,3 +27,5 @@ offset_left = -230.0
 offset_top = -129.0
 offset_right = -230.0
 offset_bottom = -129.0
+
+[connection signal="hidden" from="puzzle" to="." method="_on_puzzle_hidden"]

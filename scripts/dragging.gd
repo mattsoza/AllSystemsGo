@@ -12,13 +12,15 @@ var zone
 func _ready():
 	#rest_zones = get_tree().get_nodes_in_group("zone")
 	#rest_pt = rest_zones[0].global_position
-	piece = get_node("ElementStone002")
-	zone = get_node("dropZone")
+	piece = $ElementStone002#get_node("ElementStone002")
+	zone = $dropZone#get_node("dropZone")
+	
 
 
 func _on_area_2d_input_event(viewport, event, shape_idx):
 	if(Input.is_action_just_pressed("click")):
 		selected = true
+		
 
 		
 func _physics_process(delta):
