@@ -1,22 +1,22 @@
-[gd_scene load_steps=7 format=3 uid="uid://d2l64j0yh8rpj"]
+[gd_scene load_steps=7 format=3 uid="uid://02agyvksyc4c"]
 
-[ext_resource type="Script" path="res://scripts/NPC scripts/redHelper.gd" id="1_crjqp"]
-[ext_resource type="Texture2D" uid="uid://c5b5jsbti450l" path="res://assets/NPCs/HealthyBloodCellFrame1.png" id="1_e267e"]
-[ext_resource type="Texture2D" uid="uid://bb5lrbi618iqi" path="res://assets/NPCs/HealthyBloodCellFrame2.png" id="2_mcwvp"]
+[ext_resource type="Script" path="res://scenes/NPC scenes/germ.gd" id="1_aolb1"]
+[ext_resource type="Texture2D" uid="uid://gt5s6kn55dnx" path="res://assets/NPCs/germF1.png" id="2_mjn85"]
+[ext_resource type="Texture2D" uid="uid://6cso4potlh6q" path="res://assets/NPCs/germF2.png" id="3_jhpfk"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_qxxjj"]
 
 [sub_resource type="AnimatedTexture" id="AnimatedTexture_71jyy"]
 frames = 2
-frame_0/texture = ExtResource("1_e267e")
-frame_1/texture = ExtResource("2_mcwvp")
+frame_0/texture = ExtResource("2_mjn85")
+frame_1/texture = ExtResource("3_jhpfk")
 frame_1/duration = 1.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mfnou"]
 size = Vector2(43.2941, 44.6061)
 
-[node name="redHelper" type="Area2D"]
-script = ExtResource("1_crjqp")
+[node name="germ" type="Area2D"]
+script = ExtResource("1_aolb1")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 build_mode = 1

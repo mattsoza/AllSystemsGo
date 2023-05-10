@@ -5,6 +5,7 @@ var direction: Vector2 = Vector2()
 var puzzleActive = false
 var lockPlayer = false
 
+
 func _ready():
 	$puzzle.visible = puzzleActive
 

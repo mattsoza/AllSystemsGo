@@ -1,0 +1,68 @@
+[gd_scene load_steps=7 format=3 uid="uid://bndjmfiio2eal"]
+
+[ext_resource type="PackedScene" uid="uid://02agyvksyc4c" path="res://scenes/NPC scenes/germ.tscn" id="1_p2l13"]
+[ext_resource type="Script" path="res://scenes/NPC scenes/whiteCells.gd" id="1_wglkm"]
+[ext_resource type="PackedScene" uid="uid://7os14kc5hv6h" path="res://scenes/NPC scenes/whitCell1.tscn" id="2_tv7od"]
+[ext_resource type="PackedScene" uid="uid://c0cm8emfi2nw3" path="res://scenes/NPC scenes/whitCell2.tscn" id="3_783ps"]
+
+[sub_resource type="Animation" id="Animation_p84ys"]
+resource_name = "attack"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("whiteCell1:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.7, 1.7, 2.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(2, 2), Vector2(2, 2), Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("whiteCell1:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.7, 1.7, 2.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(190, 70), Vector2(146, 101), Vector2(146, 101), Vector2(190, 70)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("germ:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 19.0273),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_1v7ih"]
+_data = {
+"attack": SubResource("Animation_p84ys")
+}
+
+[node name="whiteCells" type="Node2D"]
+script = ExtResource("1_wglkm")
+
+[node name="germ" parent="." instance=ExtResource("1_p2l13")]
+position = Vector2(144, 103)
+
+[node name="whiteCell1" parent="." instance=ExtResource("2_tv7od")]
+position = Vector2(190, 70)
+
+[node name="whiteCell2" parent="." instance=ExtResource("3_783ps")]
+position = Vector2(100, 75)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_1v7ih")
+}

@@ -1,7 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://bgfrkngxl3w0b"]
+[gd_scene load_steps=8 format=3 uid="uid://cmhv3kt1vxwf8"]
 
 [ext_resource type="Texture2D" uid="uid://ds1h722s724qe" path="res://assets/DialogBox.png" id="1_h3a7d"]
-[ext_resource type="Texture2D" uid="uid://skatftehtkc0" path="res://assets/untitled.png" id="2_tfggi"]
+[ext_resource type="Texture2D" uid="uid://skatftehtkc0" path="res://assets/playerreceptor.png" id="2_v8fpp"]
 [ext_resource type="Texture2D" uid="uid://cpkhnql2baen3" path="res://assets/wbcReceptor.png" id="3_485x7"]
 [ext_resource type="Texture2D" uid="uid://43gcp2hdfhs" path="res://assets/receptorstem1.png" id="4_wnv54"]
 [ext_resource type="Texture2D" uid="uid://5bbjdp5f3khi" path="res://assets/receptorstem2.png" id="5_xy35k"]
@@ -85,13 +85,13 @@ patch_margin_right = 25
 patch_margin_bottom = 25
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(283, 153)
+position = Vector2(227, 153)
 rotation = 1.5708
 scale = Vector2(4, 4)
-texture = ExtResource("2_tfggi")
+texture = ExtResource("2_v8fpp")
 
 [node name="Sprite2D2" type="Sprite2D" parent="."]
-position = Vector2(179, 153)
+position = Vector2(230, 153)
 rotation = 1.5708
 scale = Vector2(4, 4)
 texture = ExtResource("3_485x7")
@@ -103,12 +103,12 @@ libraries = {
 
 [node name="Receptorstem1" type="Sprite2D" parent="."]
 position = Vector2(2.00003, 132)
-scale = Vector2(10.041, 1.93)
+scale = Vector2(6.56, 1.93)
 texture = ExtResource("4_wnv54")
 offset = Vector2(5.79268, -1.03627)
 
 [node name="Receptorstem2" type="Sprite2D" parent="."]
 position = Vector2(458, 137)
-scale = Vector2(9.99, 1.93)
+scale = Vector2(6.56, 1.93)
 texture = ExtResource("5_xy35k")
 offset = Vector2(-9.60366, -1.03627)

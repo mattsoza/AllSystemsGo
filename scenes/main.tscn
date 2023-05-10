@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://3oae4fsxf8ph"]
+[gd_scene load_steps=11 format=3 uid="uid://3oae4fsxf8ph"]
 
 [ext_resource type="Texture2D" uid="uid://bkwu2q56dp3w7" path="res://assets/kidney.png" id="1_151ov"]
 [ext_resource type="PackedScene" uid="uid://bc064ff1s1oxs" path="res://scenes/player.tscn" id="1_wwgsr"]
@@ -6,7 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://dej3hiuaho4ri" path="res://scenes/puzzleNPC.tscn" id="4_wjptw"]
 [ext_resource type="PackedScene" uid="uid://d2l64j0yh8rpj" path="res://scenes/NPC scenes/redHelper.tscn" id="5_af55u"]
 [ext_resource type="PackedScene" uid="uid://cwl62dnp55j6n" path="res://scenes/NPC scenes/kidneyStone.tscn" id="6_43mcg"]
-[ext_resource type="PackedScene" uid="uid://ojuhcinf8w7h" path="res://scenes/NPC scenes/dyingCell.tscn" id="7_3xow0"]
+[ext_resource type="PackedScene" path="res://scenes/NPC scenes/dyingCell.tscn" id="7_3xow0"]
+[ext_resource type="PackedScene" uid="uid://bndjmfiio2eal" path="res://scenes/NPC scenes/whiteCells.tscn" id="8_sclly"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qfxt5"]
 texture = ExtResource("1_151ov")
@@ -2347,11 +2348,14 @@ position = Vector2(24, 41)
 [node name="Camera2D" parent="player" index="2"]
 zoom = Vector2(3, 3)
 
+[node name="successText" parent="player/puzzle" index="9"]
+visible = false
+
 [node name="puzzleNPC" parent="." instance=ExtResource("4_wjptw")]
 position = Vector2(-111, 106)
 
 [node name="redHelper" parent="." instance=ExtResource("5_af55u")]
-position = Vector2(332, 76)
+position = Vector2(593, 120)
 
 [node name="redInformer" parent="." instance=ExtResource("4_1tvjp")]
 position = Vector2(174, 501)
@@ -2363,9 +2367,21 @@ position = Vector2(384, 540)
 position = Vector2(684, 359)
 
 [node name="Kidney Walls (static body)" type="StaticBody2D" parent="."]
+visible = false
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Kidney Walls (static body)"]
 build_mode = 1
 polygon = PackedVector2Array(57, -44, 23, -50, -108, -2, -140, 43, -157, 102, -196, 211, -194, 324, -160, 434, -86, 508, 69, 573, 183, 587, 356, 582, 484, 559, 641, 487, 679, 442, 747, 279, 747, 189, 728, 139, 674, 43, 637, 3, 550, -30, 514, -40, 374, -40, 349, -35, 346, -7, 320, 0, 265, -3, 275, 61, 275, 100, 252, 155, 202, 158, 157, 101, 155, 26, 160, -8, 120, -5, 77, -12, 67, -19, 60, -38, 670, -76, 890, 529, 107, 643, -255, 441, -173, -70, 63, -82)
 
+[node name="whiteCells" parent="." instance=ExtResource("8_sclly")]
+position = Vector2(215, -32)
+
 [editable path="player"]
+[editable path="player/puzzle"]
+[editable path="player/puzzle/puzzlePiece"]
+[editable path="player/puzzle/puzzlePiece2"]
+[editable path="player/puzzle/puzzlePiece3"]
+[editable path="player/puzzle/puzzlePiece6"]
+[editable path="player/puzzle/puzzlePiece7"]
+[editable path="player/puzzle/puzzlePiece4"]
+[editable path="player/puzzle/puzzlePiece5"]
