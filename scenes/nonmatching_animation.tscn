@@ -1,9 +1,9 @@
 [gd_scene load_steps=8 format=3 uid="uid://0rtageivowne"]
 
 [ext_resource type="Texture2D" uid="uid://ds1h722s724qe" path="res://assets/DialogBox.png" id="1_k3elt"]
-[ext_resource type="Texture2D" uid="uid://skatftehtkc0" path="res://assets/untitled.png" id="2_fypxv"]
+[ext_resource type="Texture2D" uid="uid://0lag5xof5m7w" path="res://assets/wrongreceptor.png" id="2_l2ex8"]
 [ext_resource type="Texture2D" uid="uid://cpkhnql2baen3" path="res://assets/wbcReceptor.png" id="3_2fbsp"]
-[ext_resource type="Texture2D" uid="uid://43gcp2hdfhs" path="res://assets/receptorstem1.png" id="4_u6r3v"]
+[ext_resource type="Texture2D" uid="uid://d1v3cr3xkv1ex" path="res://assets/wrongreceptorstem.png" id="4_gamwq"]
 [ext_resource type="Texture2D" uid="uid://5bbjdp5f3khi" path="res://assets/receptorstem2.png" id="5_4u2fe"]
 
 [sub_resource type="Animation" id="Animation_jt4qc"]
@@ -62,7 +62,7 @@ _data = {
 "bacteria": SubResource("Animation_jt4qc")
 }
 
-[node name="matchingAnimation" type="Control"]
+[node name="nonmatchingAnimation" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -85,13 +85,13 @@ patch_margin_right = 25
 patch_margin_bottom = 25
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(283, 153)
+position = Vector2(227, 153)
 rotation = 1.5708
 scale = Vector2(4, 4)
-texture = ExtResource("2_fypxv")
+texture = ExtResource("2_l2ex8")
 
 [node name="Sprite2D2" type="Sprite2D" parent="."]
-position = Vector2(179, 153)
+position = Vector2(230, 153)
 rotation = 1.5708
 scale = Vector2(4, 4)
 texture = ExtResource("3_2fbsp")
@@ -102,13 +102,13 @@ libraries = {
 }
 
 [node name="Receptorstem1" type="Sprite2D" parent="."]
-position = Vector2(2.00003, 132)
-scale = Vector2(10.041, 1.93)
-texture = ExtResource("4_u6r3v")
-offset = Vector2(5.79268, -1.03627)
+position = Vector2(1, 136)
+scale = Vector2(6.56, 1.93)
+texture = ExtResource("4_gamwq")
+offset = Vector2(9.75609, -3.1088)
 
 [node name="Receptorstem2" type="Sprite2D" parent="."]
 position = Vector2(458, 137)
-scale = Vector2(9.99, 1.93)
+scale = Vector2(6.56, 1.93)
 texture = ExtResource("5_4u2fe")
 offset = Vector2(-9.60366, -1.03627)
