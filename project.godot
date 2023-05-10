@@ -24,13 +24,14 @@ Dialogic="*res://addons/dialogic/Other/DialogicGameHandler.gd"
 editor/character_preview_mode=0
 editor/current_editor=&"VariablesEditor"
 editor/current_resources={
-"Character Editor": "res://assets/NPCs/kidneyStone.dch",
-"Timeline Editor": "res://dialogues/dialogs/redInformer2.dtl"
+"Character Editor": "",
+"Timeline Editor": "res://assets/NPCs/dyingCell3.dtl"
 }
-editor/last_resources=PackedStringArray("res://assets/NPCs/HelpfulRedBloodCell.dch", "res://dialogues/json/RedHelper1.dtl", "res://dialogues/dialogs/RedHelper1.dtl", "res://dialogues/dialogs/redInformer1.dtl", "res://assets/NPCs/redInformer.dch", "res://assets/NPCs/kidneyStone.dch", "res://assets/NPCs/kidneyStone.dtl", "res://dialogues/dialogs/redInformer2.dtl", "")
+editor/last_resources=PackedStringArray("res://assets/NPCs/HelpfulRedBloodCell.dch", "res://dialogues/json/RedHelper1.dtl", "res://dialogues/dialogs/RedHelper1.dtl", "res://dialogues/dialogs/redInformer1.dtl", "res://assets/NPCs/redInformer.dch", "res://assets/NPCs/kidneyStone.dch", "res://assets/NPCs/kidneyStone.dtl", "res://dialogues/dialogs/redInformer2.dtl", "res://assets/NPCs/player.dch", "res://assets/NPCs/dyingCell.dch", "res://assets/NPCs/dyingCell1.dtl", "res://assets/NPCs/dyingCell2.dtl", "res://assets/NPCs/dyingCell3.dch", "res://assets/NPCs/dyingCell3.dtl", "")
 editor/visual_timeline_editor_sidebar=200.0
 variables={
-"talkedToRedHelper": "false"
+"talkedToRedHelper": "false",
+"talkedToRedInformer": "false"
 }
 animations/join_default_length=0.5
 animations/leave_default_length=0.5
@@ -46,6 +47,10 @@ text/autopauses={}
 glossary/default_case_sensitive=true
 editor/current_timeline_path="res://dialogues/dialogs/redInformer1.dtl"
 glossary/glossary_files=["res://dialogues/dialogs/dialog_glossary.tres"]
+layout/mode=0
+layout/export_overrides={
+"box_modulate": "Color(0.752941, 0.243137, 0.243137, 0.843137)"
+}
 
 [editor_plugins]
 
