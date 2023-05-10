@@ -1,8 +1,15 @@
 if {talkedToRedHelper} == "false":
 	HelpfulRedBloodCell: Pst. Hey buddy. Come over here.
 	HelpfulRedBloodCell: Look, I know that you're a foreign pathogen. I don't personally mind myself, but there's gonna be some people who won't be very happy about that fact...
-	[signal arg="attack"]
+	VAR {viewGerm} = "true"
 	[wait time="3.0"]
+	whiteCell1: *sniff sniff* you don't look like you're from around here fella.
+	germ (Germ pic): Woah, hey man, I'm sure it's just a misunderstanding, I'll be getting out of your way.
+	"White Cell 2": Ohhh no. You ain't getting off that easy. You stepped on our turf, and for that, you gotta pay.
+	"White Cell 2": Sick him, Markey.
+	VAR {eatCell} = "true"
+	Wait, no. NOOOOOO!!!!!!
+	VAR {viewGerm} = "false"
 	HelpfulRedBloodCell: Yeah, it’s pretty rough. If you want to get through, I’d talk to Johnny over there. They know what these white blood cells are on the lookout for.
 	VAR {talkedToRedHelper} = "true"
 else:
