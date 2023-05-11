@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://cwl62dnp55j6n" path="res://scenes/NPC scenes/kidneyStone.tscn" id="6_43mcg"]
 [ext_resource type="PackedScene" uid="uid://ojuhcinf8w7h" path="res://scenes/NPC scenes/dyingCell.tscn" id="7_3xow0"]
 [ext_resource type="PackedScene" uid="uid://b1fdjksqpqilk" path="res://scenes/NPC scenes/whiteCells.tscn" id="8_sclly"]
-[ext_resource type="PackedScene" uid="uid://n0y73jtvtnvc" path="res://scenes/lungsSign.tscn" id="9_w05hi"]
+[ext_resource type="PackedScene" path="res://scenes/lungsSign.tscn" id="9_w05hi"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qfxt5"]
 texture = ExtResource("1_151ov")
@@ -2361,6 +2361,7 @@ offset_bottom = -130.0
 visible = false
 
 [node name="puzzleNPC" parent="." instance=ExtResource("4_wjptw")]
+visible = false
 position = Vector2(439, 271)
 
 [node name="redHelper" parent="." instance=ExtResource("5_af55u")]
@@ -2400,5 +2401,6 @@ position = Vector2(135, -31)
 [editable path="player/puzzle/puzzlePiece7"]
 [editable path="player/puzzle/puzzlePiece4"]
 [editable path="player/puzzle/puzzlePiece5"]
+[editable path="puzzleNPC"]
 [editable path="whiteCells"]
 [editable path="whiteCells/Camera2D/nonmatchingAnimation"]
