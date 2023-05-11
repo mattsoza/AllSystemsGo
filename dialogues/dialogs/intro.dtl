@@ -3,7 +3,7 @@ intro (New portrait): ...
 intro: Ca-...... -ear me?
 intro: Hey! Can you hear me?
 player: Yes! I can hear you!
-intro: Oh thank god. And you're still aliv not the, yes? Mercy me that was a close one.
+intro: Oh thank god. And you're still alive then, yes? Boy, that was a close one.
 intro: Hehe, well, I mean, not THAT close. You were always gonna be fine.
 player: ....
 intro: Well, uh. Anyway. We missed putting you into the lungs. Ol' Thomas's aim isn't what it used to be! We're not sure where we dropped you...
@@ -11,8 +11,9 @@ intro: But we don't have reason to believe it's dangerous.
 intro: If you can, go around and see if there's anyone there you can talk to.
 player: Talk to someone?
 intro: Yeah! We've equipped your suit with a translator so you should be able to talk to cells
-intro: We think we got it right this time! Last sucker who went down there had his equipped to "spanish mode". Wandered around for days and we lost contact, haha.
-intro: But not you! You'll be different. 
+intro: We think we got it right this time! Last sucker who went down there had his equipped to "spanish mode".
+intro: Wandered around for days and we lost contact, haha.
+intro: But not you! You'll be different.
 intro: Probably
 intro: Anyway, try and get to the lungs. If we want to fix this person up we gotta learn as much as we can about their problems.
 VAR {lockPlayer} = "false"

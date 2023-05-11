@@ -1,8 +1,8 @@
 VAR {lockPlayer} = "true"
-VAR {lockPlayer} = "false"
 if {talkedToRedHelper} == "false":
 	HelpfulRedBloodCell: Pst. Hey buddy. Come over here.
-	HelpfulRedBloodCell: Look, I know that you're a foreign pathogen. I don't personally mind myself, but there's gonna be some people who won't be very happy about that fact...
+	HelpfulRedBloodCell: Look, I know that you're a foreign pathogen. I don't personally mind myself...
+	HelpfulRedBloodCell: but there's gonna be some people who won't be very happy about that fact...
 	VAR {viewGerm} = "true"
 	[wait]
 	whiteCell1: *sniff sniff* you don't look like you're from around here fella. Present your receptors!
@@ -17,8 +17,11 @@ if {talkedToRedHelper} == "false":
 	VAR {eatCell} = "true"
 	germ: Wait, no. NOOOOOO!!!!!!
 	VAR {viewGerm} = "false"
-	HelpfulRedBloodCell: Yeah, it’s pretty rough. If you want to get through, I’d talk to Johnny over there. They know what these white blood cells are on the lookout for.
+	HelpfulRedBloodCell: Yeah, it’s pretty rough. If you want to get through, I’d talk to Johnny over there.
+	HelpfulRedBloodCell: They know what these white blood cells are on the lookout for.
 	VAR {talkedToRedHelper} = "true"
 	VAR {germKilled} = "true"
+	VAR {lockPlayer} = "false"
 else:
 	HelpfulRedBloodCell: Hey, what're you being so nosy for? Go talk to Johnny already, I don't want you getting killed out here.
+	VAR {lockPlayer} = "false"
