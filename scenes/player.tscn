@@ -1,9 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://bc064ff1s1oxs"]
+[gd_scene load_steps=5 format=3 uid="uid://bc064ff1s1oxs"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_ebyfs"]
 [ext_resource type="Texture2D" uid="uid://d3tmjjh1bpfoo" path="res://assets/Player Sprite.png" id="1_pg5bn"]
 [ext_resource type="PackedScene" uid="uid://c5j6wq0fx1l5d" path="res://scenes/puzzle.tscn" id="3_l4awl"]
-[ext_resource type="PackedScene" uid="uid://cmhv3kt1vxwf8" path="res://scenes/matching_animation.tscn" id="3_ttebg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qbcsm"]
 size = Vector2(28, 30)
@@ -21,13 +20,6 @@ shape = SubResource("RectangleShape2D_qbcsm")
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(2.5, 2.5)
 
-[node name="matchingAnimation" parent="Camera2D" instance=ExtResource("3_ttebg")]
-visible = false
-offset_left = -230.0
-offset_top = -130.0
-offset_right = -230.0
-offset_bottom = -130.0
-
 [node name="puzzle" parent="." instance=ExtResource("3_l4awl")]
 visible = false
 z_index = 10
@@ -36,7 +28,4 @@ offset_top = -129.0
 offset_right = -230.0
 offset_bottom = -129.0
 
-[connection signal="animation_finished" from="Camera2D/matchingAnimation/AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
 [connection signal="hidden" from="puzzle" to="." method="_on_puzzle_hidden"]
-
-[editable path="Camera2D/matchingAnimation"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://3oae4fsxf8ph"]
+[gd_scene load_steps=12 format=3 uid="uid://3oae4fsxf8ph"]
 
 [ext_resource type="Texture2D" uid="uid://bkwu2q56dp3w7" path="res://assets/kidney.png" id="1_151ov"]
 [ext_resource type="PackedScene" uid="uid://bc064ff1s1oxs" path="res://scenes/player.tscn" id="1_wwgsr"]
@@ -6,8 +6,9 @@
 [ext_resource type="PackedScene" uid="uid://dej3hiuaho4ri" path="res://scenes/puzzleNPC.tscn" id="4_wjptw"]
 [ext_resource type="PackedScene" uid="uid://d2l64j0yh8rpj" path="res://scenes/NPC scenes/redHelper.tscn" id="5_af55u"]
 [ext_resource type="PackedScene" uid="uid://cwl62dnp55j6n" path="res://scenes/NPC scenes/kidneyStone.tscn" id="6_43mcg"]
-[ext_resource type="PackedScene" uid="uid://c3oiut5pkyrhc" path="res://scenes/NPC scenes/dyingCell.tscn" id="7_3xow0"]
+[ext_resource type="PackedScene" uid="uid://ojuhcinf8w7h" path="res://scenes/NPC scenes/dyingCell.tscn" id="7_3xow0"]
 [ext_resource type="PackedScene" uid="uid://b1fdjksqpqilk" path="res://scenes/NPC scenes/whiteCells.tscn" id="8_sclly"]
+[ext_resource type="PackedScene" uid="uid://n0y73jtvtnvc" path="res://scenes/lungsSign.tscn" id="9_w05hi"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qfxt5"]
 texture = ExtResource("1_151ov")
@@ -2350,9 +2351,6 @@ position = Vector2(24, 41)
 [node name="Camera2D" parent="player" index="2"]
 zoom = Vector2(3, 3)
 
-[node name="matchingAnimation" parent="player/Camera2D" index="0"]
-z_index = 3
-
 [node name="successText" parent="player/puzzle" index="9"]
 visible = false
 
@@ -2377,13 +2375,15 @@ position = Vector2(438, 273)
 position = Vector2(18, -39)
 polygon = PackedVector2Array(21, 0, -81, 21, -118, 61, -136, 121, -157, 203, -157, 280, -127, 355, -67, 407, 18, 441, 115, 454, 208, 454, 308, 438, 418, 391, 454, 359, 488, 290, 508, 235, 506, 156, 472, 86, 408, 29, 321, 4, 229, 5, 223, 32, 174, 35, 164, 38, 171, 96, 158, 142, 125, 148, 93, 89, 94, 31, 55, 32, 26, 11, 23, 0, 40, -24, 106, -42, 197, -44, 297, -38, 400, -30, 511, 8, 620, 86, 651, 342, 578, 487, 382, 497, 235, 510, -89, 506, -213, 489, -348, 345, -310, 175, -255, 31, -186, -34, -72, -51, 2, -50, 41, -26)
 
+[node name="lungsSign" parent="." instance=ExtResource("9_w05hi")]
+position = Vector2(291, -31)
+
 [node name="whiteCells" parent="." instance=ExtResource("8_sclly")]
 position = Vector2(135, -31)
 
 [connection signal="animation_finished" from="whiteCells/Camera2D/nonmatchingAnimation/AnimationPlayer" to="whiteCells/Camera2D" method="_on_animation_player_animation_finished"]
 
 [editable path="player"]
-[editable path="player/Camera2D/matchingAnimation"]
 [editable path="player/puzzle"]
 [editable path="player/puzzle/puzzlePiece"]
 [editable path="player/puzzle/puzzlePiece2"]
