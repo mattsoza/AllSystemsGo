@@ -86,13 +86,13 @@ patch_margin_right = 25
 patch_margin_bottom = 25
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(283, 153)
+position = Vector2(227, 153)
 rotation = 1.5708
 scale = Vector2(4, 4)
 texture = ExtResource("2_l2ex8")
 
 [node name="Sprite2D2" type="Sprite2D" parent="."]
-position = Vector2(179, 153)
+position = Vector2(230, 153)
 rotation = 1.5708
 scale = Vector2(4, 4)
 texture = ExtResource("3_2fbsp")
@@ -104,12 +104,12 @@ libraries = {
 
 [node name="Receptorstem1" type="Sprite2D" parent="."]
 position = Vector2(1, 136)
-scale = Vector2(10.041, 1.93)
+scale = Vector2(6.56, 1.93)
 texture = ExtResource("4_gamwq")
 offset = Vector2(9.75609, -3.1088)
 
 [node name="Receptorstem2" type="Sprite2D" parent="."]
 position = Vector2(458, 137)
-scale = Vector2(9.99, 1.93)
+scale = Vector2(6.56, 1.93)
 texture = ExtResource("5_4u2fe")
 offset = Vector2(-9.60366, -1.03627)
