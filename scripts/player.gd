@@ -8,6 +8,9 @@ var showedReceptor = false
 
 
 func _ready():
+	var current_dialog = Dialogic.start('intro')
+	add_child(current_dialog)
+	
 	$puzzle.visible = puzzleActive
 	
 func changeHat():
