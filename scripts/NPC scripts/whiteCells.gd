@@ -36,3 +36,7 @@ func _on_area_2d_area_entered(area):
 		if body.is_in_group("player"):
 			var current_dialog = Dialogic.start('whiteCells')
 			add_child(current_dialog)
+
+
+func _on_animation_player_animation_finished(anim_name):
+	$germ.queue_free()
