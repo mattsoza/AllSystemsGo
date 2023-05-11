@@ -2,10 +2,10 @@
 
 [ext_resource type="Script" path="res://scripts/NPC scripts/whiteCells.gd" id="1_4t2ks"]
 [ext_resource type="PackedScene" uid="uid://b181v15ot466d" path="res://scenes/NPC scenes/germ.tscn" id="1_p2l13"]
-[ext_resource type="PackedScene" path="res://scenes/NPC scenes/whitCell1.tscn" id="2_tv7od"]
-[ext_resource type="PackedScene" path="res://scenes/NPC scenes/whitCell2.tscn" id="3_783ps"]
+[ext_resource type="PackedScene" uid="uid://7os14kc5hv6h" path="res://scenes/NPC scenes/whitCell1.tscn" id="2_tv7od"]
+[ext_resource type="PackedScene" uid="uid://c0cm8emfi2nw3" path="res://scenes/NPC scenes/whitCell2.tscn" id="3_783ps"]
 [ext_resource type="Script" path="res://scripts/cameraChangeScripts/animationCamera.gd" id="5_ca2a0"]
-[ext_resource type="PackedScene" uid="uid://0rtageivowne" path="res://scenes/nonmatching_animation.tscn" id="6_rwia3"]
+[ext_resource type="PackedScene" uid="uid://b4fl4dwdk6xb" path="res://scenes/nonmatching_animation.tscn" id="6_rwia3"]
 
 [sub_resource type="Animation" id="Animation_p84ys"]
 resource_name = "attack"
