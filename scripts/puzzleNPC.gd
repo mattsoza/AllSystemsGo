@@ -21,6 +21,8 @@ func interact():
 			if body.is_in_group("player"):
 				body.enterPuzzleMode()
 
+func _on_puzzle_hidden():
+	visible = false
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):

@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://b1fdjksqpqilk"]
+[gd_scene load_steps=10 format=3 uid="uid://b1fdjksqpqilk"]
 
 [ext_resource type="Script" path="res://scripts/NPC scripts/whiteCells.gd" id="1_4t2ks"]
 [ext_resource type="PackedScene" uid="uid://b181v15ot466d" path="res://scenes/NPC scenes/germ.tscn" id="1_p2l13"]
@@ -46,11 +46,26 @@ tracks/2/keys = {
 "update": 1,
 "values": [true, false]
 }
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("germ:disable_mode")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 2]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_1v7ih"]
 _data = {
 "attack": SubResource("Animation_p84ys")
 }
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wykxu"]
+size = Vector2(159, 91)
 
 [node name="whiteCells" type="Node2D"]
 script = ExtResource("1_4t2ks")
@@ -75,7 +90,17 @@ zoom = Vector2(2.584, 2.584)
 script = ExtResource("5_ca2a0")
 
 [node name="nonmatchingAnimation" parent="Camera2D" instance=ExtResource("6_rwia3")]
+visible = false
 offset_left = -228.0
 offset_top = -127.0
 offset_right = -228.0
 offset_bottom = -127.0
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(143, 81)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(3.5, 7.5)
+shape = SubResource("RectangleShape2D_wykxu")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
