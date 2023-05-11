@@ -1,20 +1,19 @@
 [gd_scene load_steps=5 format=3 uid="uid://bc064ff1s1oxs"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_ebyfs"]
-[ext_resource type="Texture2D" uid="uid://d3tmjjh1bpfoo" path="res://assets/Player Sprite.png" id="1_pg5bn"]
+[ext_resource type="Texture2D" uid="uid://dgw47g4t6isih" path="res://assets/NPCs/researcherNoHate.png" id="2_kt2bx"]
 [ext_resource type="PackedScene" uid="uid://c5j6wq0fx1l5d" path="res://scenes/puzzle.tscn" id="3_l4awl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qbcsm"]
-size = Vector2(28, 30)
+size = Vector2(30, 32)
 
 [node name="CharacterBody2D" type="CharacterBody2D" groups=["player"]]
 script = ExtResource("1_ebyfs")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_pg5bn")
+texture = ExtResource("2_kt2bx")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 1)
 shape = SubResource("RectangleShape2D_qbcsm")
 
 [node name="Camera2D" type="Camera2D" parent="."]
