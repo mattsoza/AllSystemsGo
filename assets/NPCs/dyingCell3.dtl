@@ -1,3 +1,4 @@
+VAR {lockPlayer} = "true"
 dyingCell: *cough. Wheeze* I'm dying sir.
 player: I know buddy. I know.
 dyingCell: Was I a good blood cell?
@@ -9,3 +10,5 @@ dyingCell: Was I a good blood cell?
 	player: Gosh, I bet you don't even know what that means, do you? Just look at you, round, creepy looking red blood cell. You know you're supposed to be an oval, right?
 	player: I'm glad I'm taking your cell parts.
 	dyingCell: Oh. Dang \:(
+VAR {cellDeath} = "true"
+VAR {lockPlayer} = "false"

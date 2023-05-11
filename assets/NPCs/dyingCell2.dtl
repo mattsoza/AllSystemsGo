@@ -1,3 +1,4 @@
+VAR {lockPlayer} = "true"
 [label name="d_start"]
 dyingCell (Dying Cell): *cough cough, wheeze wheeze*
 - Are you ok?
@@ -8,3 +9,4 @@ dyingCell (Dying Cell): *cough cough, wheeze wheeze*
 	[jump timeline="" label="d_start"]
 - End conversation
 	dyingCell: Don't leave me....
+VAR {lockPlayer} = "false"

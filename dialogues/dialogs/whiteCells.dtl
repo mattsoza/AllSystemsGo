@@ -1,0 +1,16 @@
+VAR {lockPlayer} = "true"
+if {germKilled} == "false":
+	whiteCell1: What are you doing here? Don't you see we are busy?
+else:
+	"White Cell 2": You! What are you doing here?
+	Can I pass through here?
+	"White Cell 2": Well then show me your receptor.
+	if {madeHat} == "false":
+		player: What is that?
+		whiteCell1: You don't have one? Well get away from here before one of us eat you!
+	else:
+		VAR {showReceptor} = "true"
+		[wait time="3.0"]
+		"White Cell 2": Seems like you have the right one. You can pass now.
+		whiteCell1: But don't you be causing problems, you hear me? 
+VAR {lockPlayer} = "false"

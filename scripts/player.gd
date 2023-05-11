@@ -4,6 +4,7 @@ extends CharacterBody2D
 var direction: Vector2 = Vector2()
 var puzzleActive = false
 var lockPlayer = false
+var showedReceptor = false
 
 
 func _ready():
@@ -42,9 +43,22 @@ func enterPuzzleMode():
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if !lockPlayer:
+	if !lockPlayer && !Dialogic.VAR.lockPlayer:
 		handle_movement()
+	else: 
+		velocity = Vector2(0,0)
+	if Dialogic.VAR.showReceptor == true && showedReceptor == false:
+		playAnimation()
 
+func playAnimation():
+	showedReceptor = true
+	$Camera2D/matchingAnimation.visible = true
+	$Camera2D/matchingAnimation/AnimationPlayer.play("bacteria")
+		
 
 func _on_puzzle_hidden():
 	lockPlayer = false
+
+
+func _on_animation_player_animation_finished(anim_name):
+	$Camera2D/matchingAnimation.visible = false

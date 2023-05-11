@@ -17,8 +17,6 @@ func playMatching():
 	$nonmatchingAnimation.visible = true
 	$nonmatchingAnimation/AnimationPlayer.play("bacteria")
 	
-func finishAnimation():
-	pass
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	takeControl()

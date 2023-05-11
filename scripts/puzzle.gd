@@ -21,6 +21,7 @@ func _on_button_pressed():
 			finished = false
 			break
 	if finished:
+		Dialogic.VAR.madeHat = true
 		for piece in pieces:
 			piece.finished = true
 		$successText.visible = true

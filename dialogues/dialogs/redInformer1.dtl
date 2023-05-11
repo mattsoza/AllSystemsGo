@@ -1,3 +1,4 @@
+VAR {lockPlayer} = "true"
 redInformer: Howdy stranger! You ain't from around here, are you?
 [label name="START"]
 redInformer: What you need help with?
@@ -13,3 +14,4 @@ redInformer: What you need help with?
 	[jump timeline="" label="START"]
 - Nothing
 	Be safe out there!
+VAR {lockPlayer} = "false"

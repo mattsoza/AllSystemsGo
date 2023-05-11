@@ -1,9 +1,11 @@
 extends Area2D
 
+var activated = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	$text.visible = false
+	visible = false
 	
 
 
@@ -22,8 +24,12 @@ func interact():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	interact()
-	if playerEnter():
-		$text.visible = true
-	else:
-		$text.visible = false
+	if !activated && Dialogic.VAR.cellDeath == true:
+		visible = true
+		activated = true
+	if activated:
+		interact()
+		if playerEnter():
+			$text.visible = true
+		else:
+			$text.visible = false

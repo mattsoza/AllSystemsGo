@@ -1,2 +1,4 @@
+VAR {lockPlayer} = "true"
 dyingCell: *cough cough, wheeze wheeze*
 dyingCell: I'm dying \:(
+VAR {lockPlayer} = "false"

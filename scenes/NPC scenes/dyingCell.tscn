@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://ojuhcinf8w7h"]
+[gd_scene load_steps=7 format=3 uid="uid://c3oiut5pkyrhc"]
 
 [ext_resource type="Script" path="res://scripts/NPC scripts/dyingCell.gd" id="1_h4ybg"]
 [ext_resource type="Texture2D" uid="uid://dlgw6kc8ecdks" path="res://assets/NPCs/dyingCellF1.png" id="1_lx02o"]
@@ -34,5 +34,4 @@ texture = SubResource("AnimatedTexture_nh81k")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(0.941176, -0.969696)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_myp4p")

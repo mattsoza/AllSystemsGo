@@ -8,7 +8,7 @@
 
 [sub_resource type="Animation" id="Animation_jt4qc"]
 resource_name = "bacteria"
-length = 2.0
+length = 3.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true

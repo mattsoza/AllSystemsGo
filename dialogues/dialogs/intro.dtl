@@ -1,2 +1,4 @@
+VAR {lockPlayer} = "true"
 intro (New portrait): ...
 intro: Can you hear me?
+VAR {lockPlayer} = "false"

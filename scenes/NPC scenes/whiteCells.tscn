@@ -75,7 +75,16 @@ zoom = Vector2(2.584, 2.584)
 script = ExtResource("5_ca2a0")
 
 [node name="nonmatchingAnimation" parent="Camera2D" instance=ExtResource("6_rwia3")]
+visible = false
 offset_left = -228.0
 offset_top = -127.0
 offset_right = -228.0
 offset_bottom = -127.0
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
+position = Vector2(142, 93)
+polygon = PackedVector2Array(-7, -69, -33, -65, -70, -51, -72, 8, -56, 34, -19, 61, 30, 64, 62, 36, 75, 1, 72, -51, 44, -61, 14, -66)
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

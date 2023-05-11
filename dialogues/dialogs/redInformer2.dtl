@@ -1,3 +1,4 @@
+VAR {lockPlayer} = "true"
 redInformer (New portrait): Howdy stranger! You ain't from around here, are you?
 [label name="START"]
 redInformer: What you need help with?
@@ -17,11 +18,13 @@ redInformer: What you need help with?
 	redInformer: But you look a bit different.....................................................................................................................
 	redInformer: You know what.. I like the cut of your jib. You got moxie kid! Alright, you broke me, I'll tell ya how to get past.
 	redInformer: But let me tell yer, it won't be easy! 1000s of folk like you come by here everyday only to meet an untimely death. Wooooo doggy!
-	redInformer: Anyhow. You see this neat little hat I'm wearing? This here is called an antigen. You look around and you'll see everyone wearing one. It's what keeps the white blood cells from attacking us.
-	redInformer: Everything's got antigens, but the white blood cells can recognize the good ones on cells in the body from bad ones like those on bacteria. And you're absolutely filthy, they can probably smell your dirty-butt antigens from miles away
+	redInformer: Anyhow. You see this neat little hat I'm wearing? This here is called a receptor. You look around and you'll see everyone wearing one. It's what keeps the white blood cells from attacking us.
+	redInformer: Everything's got receptors, but the white blood cells can recognize the good ones on cells in the body from bad ones like those on bacteria. And you're absolutely filthy, they can probably smell your dirty-butt antigens from miles away
 	redInformer: Get yur'self one of these and you'll be finer than a frog hair split four ways.
+	redInformer: Be sure it is the same shape! Or you might not have a great time with those white blood cells...
 	player (New portrait): Can I have yours?
 	redInformer: Heck no! I don't wanna get eaten alive!
 	VAR {talkedToRedInformer} = "true"
 - Nothing
 	redInformer: Be safe out there!
+VAR {lockPlayer} = "false"

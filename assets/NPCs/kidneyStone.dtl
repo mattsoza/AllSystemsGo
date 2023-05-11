@@ -1,1 +1,3 @@
+VAR {lockPlayer} = "true"
 kidneyStone: I'm a kidney stone! Hehehe... \:))))
+VAR {lockPlayer} = "false"

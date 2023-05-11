@@ -1,12 +1,12 @@
 [gd_scene load_steps=5 format=3 uid="uid://dej3hiuaho4ri"]
 
 [ext_resource type="Script" path="res://scripts/puzzleNPC.gd" id="1_unsr4"]
-[ext_resource type="Texture2D" uid="uid://6i45g5bvjdmt" path="res://assets/Duck.png" id="3_5tkrn"]
+[ext_resource type="Texture2D" path="res://assets/pieces.png" id="2_j21f2"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_dbjk2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n3uib"]
-size = Vector2(28.2353, 29.0909)
+size = Vector2(45.1765, 42.6667)
 
 [node name="puzzleNPC" type="Area2D"]
 position = Vector2(9, 6)
@@ -23,10 +23,11 @@ scale = Vector2(0.53125, 0.515625)
 physics_material_override = SubResource("PhysicsMaterial_dbjk2")
 
 [node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
-texture = ExtResource("3_5tkrn")
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("2_j21f2")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(-0.941177, 2.90909)
+position = Vector2(-1.88235, 3.87879)
 shape = SubResource("RectangleShape2D_n3uib")
 
 [node name="text" type="RichTextLabel" parent="."]
