@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://dej3hiuaho4ri"]
 
 [ext_resource type="Script" path="res://scripts/puzzleNPC.gd" id="1_unsr4"]
-[ext_resource type="Texture2D" path="res://assets/pieces.png" id="2_j21f2"]
+[ext_resource type="Texture2D" uid="uid://c7sm7hw2oo3lf" path="res://assets/pieces.png" id="2_j21f2"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_dbjk2"]
 

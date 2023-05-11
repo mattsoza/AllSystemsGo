@@ -9,6 +9,13 @@ var showedReceptor = false
 
 func _ready():
 	$puzzle.visible = puzzleActive
+	
+func changeHat():
+	var puzzle = get_node('puzzle')
+	if puzzle.finished:
+		var char_tex = load("res://assets/NPCs/researcherWithHat.png")
+		var sprite = get_node('Sprite2D')
+		sprite.texture = char_tex
 
 # function for movement
 func handle_movement():
@@ -49,6 +56,7 @@ func _process(delta):
 		velocity = Vector2(0,0)
 	if Dialogic.VAR.showReceptor == true && showedReceptor == false:
 		playAnimation()
+	changeHat()
 
 func playAnimation():
 	showedReceptor = true
