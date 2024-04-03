@@ -1,4 +1,4 @@
-# BioRPG
+# All Systems Go!
 
 ## Summary
 Spring 2023 final project for CMS.590, computer games. This is the team's first time using Godot, an open-source game engine with support for a GDScript, a langauge with syntax similar to python.
